@@ -1,1 +1,1 @@
-Estou aprendendo HTML e CSS e estou criando um site sobre o Batman como um projeto de teste. Isso está me ajudando a aprender e aprimorar minhas habilidades como programador.
+Estou aprendendo HTML e CSS e estou criando um site sobre o filme do Batman como um projeto de teste. Isso está me ajudando a aprender e aprimorar minhas habilidades como programador. Neste site, estou testando minhas habilidades e explorando diversas funcionalidades para criar uma experiência única para os visitantes.
