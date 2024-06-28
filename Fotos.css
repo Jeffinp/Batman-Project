@@ -122,31 +122,32 @@ li:hover {
 
 #foto1 {
     background-image: url('https://universoheroico.com.br/wp-content/uploads/2022/03/Imagme-do-filme-Batman.jpg');
-    background-position: 30% 30%;
+    background-position: 30% 50%;
     background-size: cover;
-    width: 580px;
-    height: 355px;
-    border-radius: 5px;
+    width: 600px;
+    height: 800px;
     position: relative;
+    border-radius: 5px;
+    margin-left: 10px;
 }
 
 #foto2 {
-    background-image: url('https://ogimg.infoglobo.com.br/cultura/filmes/25420658-f05-b88/FT1086A/760/arte-2.png');
-    background-position: 50% 50%;
-    background-size: cover;
-    width: 650px;
-    height: 350px;
-    position: relative;
-    border-radius: 5px;
-    margin-left: 10px; /* Ajuste o espaçamento entre as fotos */
-}
-
-#foto3 {
     background-image: url('https://cinemaweb.com.br/wp-content/uploads/2023/12/the-batman-robert-pattinson.jpg');
     background-position: 50% 50%;
     background-size: cover;
-    width: 550px;
-    height: 350px;
+    width: 600px;
+    height: 800px;
+    position: relative;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+#foto3 {
+    background-image: url('https://s2.glbimg.com/lJEJ_rnqoTSiKQ542pPpVphEgOM=/e.glbimg.com/og/ed/f/original/2021/12/31/zoe_kravitz_catwoman.jpeg');
+    background-position: 30% 50%;
+    background-size: cover;
+    width: 600px;
+    height: 800px;
     position: relative;
     border-radius: 5px;
     margin-left: 10px;
