@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Eczar:wght@400..800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box; /* Garante que padding e border sejam incluídos no tamanho total dos elementos */
+}
+
+html, body {
+    overflow-x: hidden; /* Evita o scroll horizontal */
+}
+
+header {
+    height: 90px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav {
+    width: 60%;
+}
+
+ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+li {
+    color: #f0f8ff;
+    cursor: pointer;
+    font-size: 21px;
+    transition: 0.5s;
+    font-family: "Oswald", sans-serif;
+}
+
+li a:link {
+    color: inherit; 
+    text-decoration: none; 
+}
+
+li a:visited { 
+    color: inherit; 
+    text-decoration: none; 
+}
+
+li:hover {
+    color: #d21617;
+}
+
+#logo {
+    width: 150px;
+    height: auto;
+}
+
+/* Estilos do banner */
+#banner {
+    background-image: url('https://legadodadc.com.br/wp-content/uploads/2021/11/FD1uY9yXsAIVZrw.jpg');
+    background-position: 50% 50%;
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+    position: relative;
+    overflow: hidden; /* Corta o pseudo-elemento que sai do container */
+    transition: transform 0.5s ease; /* Adiciona uma transição suave para o efeito de zoom */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+
+#banner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: box-shadow 0.5s ease; /* Adiciona uma transição suave para o efeito de desfoque */
+}
+
+#banner:hover {
+    transform: scale(1.002); /* Aplica um leve zoom ao passar o mouse */
+    overflow: hidden; /* Esconde a barra de rolagem ao aumentar */
+}
+
+/* Estilos do texto sobreposto */
+#texto-sobreposto {
+    position: absolute;
+    top: 50%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Move o texto para o centro */
+    text-align: center;
+    color: white; /* Cor do texto */
+    background-color: transparent;
+    z-index: 1; /* Coloca o texto sobre a imagem */
+}
+
+#texto-sobreposto h1 {
+    font-size: 90px; /* Tamanho do título */
+    font-family: 'Oswald', sans-serif; /* Fonte do título */
+    margin-bottom: 10px; /* Espaçamento abaixo do título */
+    background-color: transparent;
+}
+
+#texto-sobreposto p {
+    font-size: 25px; /* Tamanho do texto */
+    font-family: 'Oswald', serif; /* Fonte do texto */
+    background-color: transparent;
+}
+
+/* Estilos das fotos lado a lado */
+.fotos-container {
+    display: flex;
+    justify-content: space-between; /* Espaço igual entre as fotos */
+    margin-top: 30px;
+}
+
+#foto1 {
+    background-image: url('https://universoheroico.com.br/wp-content/uploads/2022/03/Imagme-do-filme-Batman.jpg');
+    background-position: 30% 30%;
+    background-size: cover;
+    width: 580px;
+    height: 355px;
+    border-radius: 5px;
+    position: relative;
+}
+
+#foto2 {
+    background-image: url('https://ogimg.infoglobo.com.br/cultura/filmes/25420658-f05-b88/FT1086A/760/arte-2.png');
+    background-position: 50% 50%;
+    background-size: cover;
+    width: 650px;
+    height: 350px;
+    position: relative;
+    border-radius: 5px;
+    margin-left: 10px; /* Ajuste o espaçamento entre as fotos */
+}
+
+#foto3 {
+    background-image: url('https://cinemaweb.com.br/wp-content/uploads/2023/12/the-batman-robert-pattinson.jpg');
+    background-position: 50% 50%;
+    background-size: cover;
+    width: 550px;
+    height: 350px;
+    position: relative;
+    border-radius: 5px;
+    margin-left: 10px;
+}
