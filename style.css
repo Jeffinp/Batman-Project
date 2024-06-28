@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box; /* Garante que padding e border sejam incluídos no tamanho total dos elementos */
+}
+
+html, body {
+    overflow-x: hidden; /* Evita o scroll horizontal */
+}
+
+header {
+    height: 90px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav {
+    width: 60%;
+}
+
+ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+li {
+    color: #f0f8ff;
+    cursor: pointer;
+    font-size: 19px;
+    transition: 0.5s;
+    font-family: "Kdam Thmor Pro", sans-serif;
+}
+
+li:hover {
+    color: #d21617;
+}
+
+#logo {
+    width: 150px;
+    height: auto;
+}
+
+.logo2 {
+    width: 280px;
+    height: auto;
+    border-radius: 500px;
+    transition: 0.5s;
+}
+
+.logo2:hover {
+    transform: scale(1.008);
+}
+
+#Banner {
+    background-image: url('https://i.redd.it/6092ltrt8nt71.jpg');
+    background-position: 50% 50%;
+    background-size: cover;
+    width: 100%;
+    height: 600px;
+    position: relative;
+    overflow: hidden; /* Corta o pseudo-elemento que sai do container */
+    transition: transform 0.5s ease; /* Adiciona uma transição suave para o efeito de zoom */
+}
+
+#Banner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: box-shadow 0.5s ease; /* Adiciona uma transição suave para o efeito de desfoque */
+}
+
+#Banner:hover {
+    transform: scale(1.005); /* Aplica um leve zoom ao passar o mouse */
+}
+
+#Banner:hover::after {
+    box-shadow: inset 0 0 20px 10px rgba(255, 0, 0, 0.514); /* Aplica o efeito de bordas borradas */
+}
+
+#trailer-container {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.trailer {
+    width: 50%;
+}
+
+#sinopse {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 30px;
+}
+
+.description {
+    color: #ffffff;
+    font-size: 19px;
+    font-family: "Kdam Thmor Pro", sans-serif;
+    width: 90%;
+}
+
+
+.button {
+    width: 200px;
+    height: 60px;
+    background-color: #d21617;
+    color: #ffffff; /* Aplica a cor ao texto */
+    padding: 8px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.8s;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    margin-top: 25px;
+    position: relative; /* Necessário para posicionamento do box-shadow */
+}
+
+.button:hover {
+    background-color: #ffffff;
+    color: #000000;
+    box-shadow: 0 0 10px 5px rgba(210, 22, 23, 0.7); /* Box-shadow com desfoque */
+}
+
+.actor-cards-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.cards-contents {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 20px;
+    column-gap: 40px;
+}
+
+.card {
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+    background-position: 50% 50%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 0 20px 10px;
+    color: #ffffff;
+    font-size: 17px;
+    font-style: italic;
+    font-family: "Kdam Thmor Pro", sans-serif;
+    position: relative; /* Para posicionamento do box-shadow */
+    overflow: hidden; /* Para que o box-shadow fique dentro dos limites da .card */
+}
+
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 20px rgba(78, 78, 78, 0.5); /* Box-shadow com desfoque */
+}
+
+.banner-1 {
+    background-image: url("./Imagens/batman-robert-pattinson-foto-divulgacao-warner-bros_fixed_large.webp");
+}
+
+.banner-2 {
+    background-image: url("https://criticalhits.com.br/wp-content/uploads/2022/03/zoe-kravitz-mulher-gato.jpg");
+}
+
+.banner-3 {
+    background-image: url("https://ovicio.com.br/wp-content/uploads/2020/12/20201218-jeffrey_wright_gotham_the_batman_hbo_max_commissioner_gordon.png");
+}
+
+footer {
+    height: 300px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+span {
+    color: #ffffff;
+    font-family: "Kdam Thmor Pro", sans-serif;
+    margin: -45px;
+}
+
+.footer-navigation {
+    display: none;
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (max-width: 768px) { /* PARA DISPOSITIVOS MOBILE */
+    .footer-navigation {
+        display: block;
+    }
+
+    .trailer {
+        margin-top: 300px;
+        margin-left: 20px;
+    }
+
+    .button {
+        width: 100%;
+        margin-bottom: 90px;
+    }
+
+    .banner-1 {
+        margin-top: 45px;
+    }
+
+    .logo2 {
+        width: 150px;
+        height: auto;
+        margin-bottom: 80px;
+    }
+
+    .copyright {
+        margin-bottom: 50px;
+    }
+
+    .assinatura {
+        margin-bottom: 10px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .footer-list {
+        margin-bottom: 10px;
+    }
+
+    #Banner {
+        background-position: 40%;
+    }
+
+    #trailer-container {
+        width: 100%;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .trailer {
+        width: 100%;
+    }
+
+    #sinopse {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .description {
+        width: 100%;
+    }
+
+    .cards-contents {
+        grid-template-columns: 1fr;
+        margin-top: 150px;
+    }
+}
+
+
+/*
+@import: Importa a fonte "Kdam Thmor Pro" do Google Fonts. 
+
+* : Seleciona todos os elementos.
+    margin: Remove as margens.
+    padding: Remove os preenchimentos.
+    background-color: Define a cor de fundo para preto.
+    list-style: Remove os marcadores de lista.
+    text-decoration: Remove sublinhados de links.
+    box-sizing: Inclui padding e border no tamanho total dos elementos.
+    overflow-x: Oculta o scroll horizontal.
+
+header: Define o estilo do cabeçalho.
+    height: Define a altura.
+    display: Usa flexbox para layout.
+    justify-content: Espaça uniformemente os itens ao longo do eixo principal.
+    align-items: Centraliza os itens ao longo do eixo transversal.
+
+nav: Define o estilo do menu de navegação.
+    width: Define a largura do elemento nav.
+
+ul: Define o estilo da lista não ordenada.
+    width: Define a largura de 100%.
+    justify-content: Distribui os itens da lista uniformemente.
+
+li: Define o estilo dos itens da lista.
+    color: Define a cor do texto.
+    cursor: Define o cursor como ponteiro ao passar o mouse.
+    font-size: Define o tamanho da fonte.
+    transition: Define a duração da transição.
+    font-family: Define a fonte dos itens da lista.
+    border-radius: Define bordas arredondadas.
+
+.banner: Define o estilo do banner.
+    background-image: Define a imagem de fundo.
+    background-position: Centraliza a imagem.
+    background-size: Cobre todo o container.
+    width: Define a largura.
+    height: Define a altura.
+    position: Define a posição relativa.
+    overflow: Oculta conteúdo que sai do container.
+    transition: Define a transição suave para o efeito de zoom.
+
+::after: Define o estilo do pseudo-elemento.
+    content: Define um conteúdo vazio.
+    position: Define a posição absoluta.
+    top, left, right, bottom: Estica o pseudo-elemento para cobrir todo o banner.
+    transition: Define uma transição suave para o efeito de sombra.
+
+.content: Define o estilo do conteúdo.
+    width: Define a largura.
+    display: Usa flexbox para layout.
+    align-items: Centraliza os itens verticalmente.
+    justify-content: Espaça uniformemente os itens.
+
+.section: Define o estilo de uma seção específica.
+    width: Define a largura.
+    display: Usa flexbox para layout.
+    flex-direction: Define a direção da flexbox como coluna.
+    justify-content: Espaça uniformemente os itens.
+    margin-left: Adiciona margem à esquerda.
+
+.description: Define o estilo da descrição.
+    color: Define a cor do texto.
+    font-size: Define o tamanho da fonte.
+    font-family: Define a fonte.
+    width: Define a largura.
+    text-align: Alinha o texto de forma justificada.
+
+.button: Define o estilo do botão.
+    width: Define a largura.
+    height: Define a altura.
+    background-color: Define a cor de fundo.
+    color: Define a cor do texto.
+    padding: Define o preenchimento.
+    border-radius: Define bordas arredondadas.
+    cursor: Define o cursor como ponteiro ao passar o mouse.
+    transition: Define a duração da transição.
+    font-size: Define o tamanho da fonte.
+    display: Usa flexbox para layout.
+    justify-content: Centraliza o texto horizontalmente.
+    align-items: Centraliza o texto verticalmente.
+    font-weight: Define a espessura da fonte.
+    border: Remove a borda.
+    outline: Remove o contorno.
+    margin-top: Adiciona margem superior.
+    position: Define a posição relativa.
+*/
