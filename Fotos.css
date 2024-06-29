@@ -1,5 +1,7 @@
+/* Importação de fontes do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Eczar:wght@400..800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
+/* Reset de estilos básicos */
 * {
     margin: 0;
     padding: 0;
@@ -9,10 +11,12 @@
     box-sizing: border-box;
 }
 
+/* Estilos globais para HTML e BODY */
 html, body {
-    overflow-x: hidden;
+    overflow-x: hidden; /* Previne a rolagem horizontal */
 }
 
+/* Estilos para o cabeçalho */
 header {
     height: 90px;
     display: flex;
@@ -20,6 +24,7 @@ header {
     align-items: center;
 }
 
+/* Estilos para a navegação */
 nav {
     width: 60%;
 }
@@ -38,33 +43,60 @@ li {
     font-family: "Oswald", sans-serif;
 }
 
-li a {
-    color: inherit;
-    text-decoration: none;
+/* para remover o azul do link após ser  clicado*/
+li a:link {
+    color: inherit; 
+    text-decoration: none; 
+}
+
+li a:visited { 
+    color: inherit; 
+    text-decoration: none; 
 }
 
 li:hover {
     color: #d21617;
 }
 
+/* Estilos para o logo */
 #logo {
     width: 150px;
     height: auto;
 }
 
+body {
+    background-image: url('./Imagens/the-batman-2021-movie-batman-minimal-art-wallpaper-2560x1080_14.jpg');
+    background-position: center top;
+    background-size: cover;
+    background-attachment: fixed; /* Mantém a imagem fixa enquanto rola a página */
+    background-repeat: no-repeat;
+    color: white; /* Cor do texto sobre o fundo */
+    font-family: 'Arial', sans-serif; /* Fonte do texto */
+}
+
+.banner-text {
+    text-align: center; /* Centraliza o texto na página */
+    padding: 20px; /* Espaçamento interno */
+    font-size: 24px; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito */
+    background-color: rgba(190, 61, 61, 0.048); /* Fundo semi-transparente */
+}
+
+
+/* Estilos para o título principal */
 h1 {
     font-family: Oswald, sans-serif;
     display: flex;
     justify-content: center;
     color: white;
     margin-top: 25px; /* Ajuste a margem superior para 25px */
-    margin-bottom: -20px;
+    margin-bottom: -20px; /* Ajuste a margem inferior para -20px */
+    background-color: transparent;
 }
-
 
 /* Estilos do banner */
 #banner {
-    background-image: url('https://legadodadc.com.br/wp-content/uploads/2021/11/FD1uY9yXsAIVZrw.jpg');
+    background-image: url('https://adnews.com.br/wp-content/uploads/2022/02/The-Batman-saiba-tudo-o-que-esperar-do-filme-.jpg');
     background-position: 50% 50%;
     background-size: cover;
     width: 100%;
@@ -72,9 +104,6 @@ h1 {
     position: relative;
     overflow: hidden;
     transition: transform 0.5s ease;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
 }
 
 #banner::after {
@@ -92,8 +121,9 @@ h1 {
     overflow: hidden;
 }
 
-/* Estilos do texto sobreposto */
+/* Estilos do texto sobreposto no banner */
 #texto-sobreposto {
+    background-color: transparent;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -101,30 +131,31 @@ h1 {
     text-align: center;
     color: white;
     z-index: 1;
-    background-color: transparent;
 }
 
 #texto-sobreposto h1 {
+    background-color: transparent;
     font-size: 90px;
     font-family: 'Oswald', sans-serif;
     margin-bottom: 10px;
-    background-color: transparent;
 }
 
 #texto-sobreposto p {
+    background-color: transparent;
     font-size: 25px;
     font-family: 'Oswald', serif;
-    background-color: transparent;
 }
 
-/* Estilos das fotos lado a lado */
+/* Estilos para o container das fotos */
 #fotos-container {
     display: flex;
     justify-content: center;
     margin: 30px 30px 0 30px;
     gap: 30px;
+    background-color: transparent;
 }
 
+/* Estilos para cada foto individual */
 #foto1, #foto2, #foto3 {
     background-size: cover;
     width: 400px;
@@ -134,6 +165,15 @@ h1 {
     display: flex;
     align-items: flex-end;
     overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: transparent;
+}
+
+/* Efeito de hover nas fotos */
+#foto1:hover, #foto2:hover, #foto3:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 20px rgba(78, 78, 78, 0.5);
 }
 
 #foto1 {
@@ -149,17 +189,20 @@ h1 {
 #foto3 {
     background-image: url('https://s2.glbimg.com/lJEJ_rnqoTSiKQ542pPpVphEgOM=/e.glbimg.com/og/ed/f/original/2021/12/31/zoe_kravitz_catwoman.jpeg');
     background-position: 30% 50%;
+     background-color: transparent;
 }
 
-/* Estilos dos atores */
+/* Estilos para a seção de atores */
 #atores {
     margin-top: 50px;
     display: flex;
     justify-content: center;
     gap: 10px;
     flex-wrap: wrap;
+    background-color: transparent;
 }
 
+/* Estilos para cada ator individual */
 .RobertPattinson,
 .ColinFarrell,
 .ZoeKravitz,
@@ -175,8 +218,22 @@ h1 {
     align-items: flex-end;
     justify-content: center;
     overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: transparent;
 }
 
+/* Efeito de hover nos atores */
+.RobertPattinson:hover,
+.ColinFarrell:hover,
+.ZoeKravitz:hover,
+.JeffreyWright:hover,
+.PaulDano:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 20px rgba(78, 78, 78, 0.5);
+}
+
+/* Estilos para o nome do ator sobre a imagem */
 .name {
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
@@ -186,11 +243,82 @@ h1 {
     font-size: 20px;
     box-sizing: border-box;
     font-family: 'Oswald', sans-serif;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    transition: background-color 0.3s ease;
+    
+}
+
+/* Efeito de hover no nome do ator */
+.RobertPattinson:hover .name,
+.ColinFarrell:hover .name,
+.ZoeKravitz:hover .name,
+.JeffreyWright:hover .name,
+.PaulDano:hover .name {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Estilos para o container dos diretores */
+.diretores {
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+}
+
+/* Estilos para o container e imagem do Matt Reeves */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza a imagem e o texto */
+    flex-direction: column; /* Coloca a imagem e o texto um embaixo do outro */
+    text-align: center; /* Centraliza o texto */
+    background-color: transparent;
+}
+
+.MattReeves {
+    background-image: url('https://m.media-amazon.com/images/M/MV5BYmM5NTA4ZGMtMGJhYy00YzlhLThlM2QtZjFjY2Y5YmJjOTE2XkEyXkFqcGdeQXVyNzg5MzIyOA@@._V1_.jpg');
+    background-position: 50% 50%;
+    background-size: cover;
+    width: 400px;
+    height: 500px;
+    position: relative;
+    border-radius: 5px;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    margin-top: 50px;
+    margin-bottom: 20px; /* Espaço entre a imagem e o texto */
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: transparent;
+}
+
+/* Efeito de hover no container do Matt Reeves */
+.MattReeves:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 20px rgba(78, 78, 78, 0.5);
+    background-color: transparent;
+}
+
+.biografia {
+    background-color: transparent;
+    color: white; /* Cor do texto */
+    font-family: 'Oswald', sans-serif; /* Fonte do texto */
+    max-width: 400px; /* Limita a largura do texto */
+    font-size: 18px;
+    
+}
+
+p {
+    background-color: transparent;
 }
 
 /* Background images para cada ator */
 .RobertPattinson {
     background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgt3BBtEAPcvn4xBCyDeLqH5hjUhz-k8kMYFoXPGy9v7_1TXX8');
+    
 }
 
 .ColinFarrell {
@@ -209,6 +337,8 @@ h1 {
     background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/25/Paul_Dano_at_Berlinale_2024_Ausschnitt.jpg');
 }
 
+
+/* Estilos para o rodapé */
 footer {
     height: 300px;
     margin-top: 50px;
@@ -218,15 +348,18 @@ footer {
     justify-content: space-around;
 }
 
+/* Estilos para os itens do rodapé */
 span {
     color: #ffffff;
     font-family: "Oswald", sans-serif;
-    margin: -45px;
+    margin: -45px; /* Ajusta a margem */
+
 }
 
+/* Estilos para a navegação do rodapé */
 .footer-navigation {
     text-align: center; /* Centraliza o conteúdo do nav */
-    display: none;
+    display: none; /* Esconde a navegação em dispositivos menores */
 }
 
 .footer-list {
@@ -241,22 +374,115 @@ span {
     margin: 0 10px; /* Define uma margem horizontal entre os itens */
 }
 
-@media (max-width: 768px) { /* PARA DISPOSITIVOS MOBILE */
+/* Estilos para o logo no rodapé */
+.logo2 {
+    width: 280px;
+    height: auto;
+    border-radius: 500px;
+    transition: 0.5s;
+}
+
+.logo2:hover {
+    transform: scale(1.008);
+}
+
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    /* Estilos para o container dos diretores em dispositivos móveis */
+    .container {
+        display: flex;
+        flex-direction: column; /* Coloca a imagem e o texto um abaixo do outro */
+        align-items: center; /* Centraliza horizontalmente */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    /* Estilos para a imagem do Matt Reeves em dispositivos móveis */
+    .MattReeves {
+        width: 90%; /* Ajusta a largura da imagem */
+    }
+
+    /* Estilos para a biografia em dispositivos móveis */
+    .biografia {
+        margin-top: 20px; /* Espaço entre a imagem e o texto */
+        margin-left: 0; /* Remove a margem à esquerda */
+        width: 90%; /* Ajusta a largura do texto */
+        font-size: 19px;
+    }
+
+    /* Estilos para a navegação do rodapé em dispositivos móveis */
     .footer-navigation {
-        display: block;
+        display: block; /* Exibe a navegação em dispositivos menores */
     }
 
+    /* Estilos para o título no texto sobreposto em dispositivos móveis */
+    #texto-sobreposto h1 {
+        font-size: 35px; /* Ajusta o tamanho da fonte para telas pequenas */
+        margin: 20px; /* Adiciona margem ao redor do texto */
+    }
+
+    /* Estilos para o parágrafo no texto sobreposto em dispositivos móveis */
+    #texto-sobreposto p {
+        font-size: 18px; /* Ajusta o tamanho da fonte do parágrafo */
+        margin: 10px; /* Adiciona margem ao redor do texto */
+    }
+
+    /* Estilos para o logo no rodapé em dispositivos móveis */
     .logo2 {
-        width: 150px;
+        width: 150px; /* Ajusta o tamanho do logo */
         height: auto;
-        margin-bottom: 80px;
+        margin-bottom: 80px; /* Adiciona margem inferior */
     }
 
+    /* Estilos para esconder a navegação principal em dispositivos móveis */
     nav {
         display: none;
     }
 
+    /* Estilos para o texto de direitos autorais no rodapé em dispositivos móveis */
+    .copyright {
+        margin-bottom: -50px;
+    }
+
+    /* Estilos para a assinatura no rodapé em dispositivos móveis */
+    .assinatura {
+        margin-bottom: 10px;
+    }
+
+    /* Estilos para a lista no rodapé em dispositivos móveis */
     .footer-list {
         margin-bottom: 10px;
+    }
+
+    /* Estilos para o container de fotos em dispositivos móveis */
+    #fotos-container {
+        display: flex;
+        flex-direction: column; /* Faz com que as fotos fiquem uma abaixo da outra */
+        align-items: center;
+    }
+
+    /* Estilos para cada foto individual em dispositivos móveis */
+    #foto1, #foto2, #foto3 {
+        width: 90%; /* Ajusta a largura das fotos para caber melhor na tela */
+        height: 300px; /* Ajusta a altura automaticamente para manter a proporção */
+        margin-bottom: 5px; /* Espaço entre as fotos */
+    }
+
+    #atores {
+        display: flex;
+        flex-direction: column; /* Faz com que as imagens dos atores fiquem uma abaixo da outra */
+        align-items: center; /* Centraliza horizontalmente */
+        justify-content: center; /* Centraliza verticalmente */
+        gap: 20px; /* Espaço entre as imagens dos atores */
+        width: 90%; /* Limita a largura do container de atores */
+        margin: 50px auto 0 auto; /* Margem superior para afastar do título e centralizar */
+        padding-top: 20px; /* Espaçamento superior */
+    }
+
+    /* Estilos para cada ator individual em dispositivos móveis */
+    .RobertPattinson, .ColinFarrell, .ZoeKravitz, .JeffreyWright, .PaulDano {
+        width: 100%; /* Ocupa toda a largura do container pai */
+        height: 400px; /* Altura fixa para manter a proporção */
+        margin-bottom: 20px; /* Espaço entre as imagens dos atores */
     }
 }

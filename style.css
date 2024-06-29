@@ -70,7 +70,7 @@ li:hover {
 }
 
 #Banner {
-    background-image: url('https://i.redd.it/6092ltrt8nt71.jpg');
+    background-image: url('https://t.ctcdn.com.br/BztkvPe1BQe3e-hdycrPDUKa5L4=/1024x576/smart/i586811.png');
     background-position: 50% 50%;
     background-size: cover;
     width: 100%;
@@ -95,7 +95,7 @@ li:hover {
 }
 
 #Banner:hover::after {
-    box-shadow: inset 0 0 20px 10px rgba(255, 0, 0, 0.514); /* Aplica o efeito de bordas borradas */
+    box-shadow: inset 0 0 20px 10px rgba(83, 0, 0, 0.514); /* Aplica o efeito de bordas borradas */
 }
 
 #trailer-container {
@@ -268,7 +268,7 @@ span {
     }
 
     .copyright {
-        margin-bottom: 50px;
+        margin-bottom: -50px;
     }
 
     .assinatura {
