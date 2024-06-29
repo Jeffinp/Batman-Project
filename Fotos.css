@@ -6,11 +6,11 @@
     background-color: #000000;
     list-style: none;
     text-decoration: none;
-    box-sizing: border-box; /* Garante que padding e border sejam incluídos no tamanho total dos elementos */
+    box-sizing: border-box;
 }
 
 html, body {
-    overflow-x: hidden; /* Evita o scroll horizontal */
+    overflow-x: hidden;
 }
 
 header {
@@ -38,14 +38,9 @@ li {
     font-family: "Oswald", sans-serif;
 }
 
-li a:link {
-    color: inherit; 
-    text-decoration: none; 
-}
-
-li a:visited { 
-    color: inherit; 
-    text-decoration: none; 
+li a {
+    color: inherit;
+    text-decoration: none;
 }
 
 li:hover {
@@ -57,6 +52,16 @@ li:hover {
     height: auto;
 }
 
+h1 {
+    font-family: Oswald, sans-serif;
+    display: flex;
+    justify-content: center;
+    color: white;
+    margin-top: 25px; /* Ajuste a margem superior para 25px */
+    margin-bottom: -20px;
+}
+
+
 /* Estilos do banner */
 #banner {
     background-image: url('https://legadodadc.com.br/wp-content/uploads/2021/11/FD1uY9yXsAIVZrw.jpg');
@@ -65,13 +70,12 @@ li:hover {
     width: 100%;
     height: 500px;
     position: relative;
-    overflow: hidden; /* Corta o pseudo-elemento que sai do container */
-    transition: transform 0.5s ease; /* Adiciona uma transição suave para o efeito de zoom */
+    overflow: hidden;
+    transition: transform 0.5s ease;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
 }
-
 
 #banner::after {
     content: "";
@@ -80,75 +84,179 @@ li:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    transition: box-shadow 0.5s ease; /* Adiciona uma transição suave para o efeito de desfoque */
+    transition: box-shadow 0.5s ease;
 }
 
 #banner:hover {
-    transform: scale(1.002); /* Aplica um leve zoom ao passar o mouse */
-    overflow: hidden; /* Esconde a barra de rolagem ao aumentar */
+    transform: scale(1.002);
+    overflow: hidden;
 }
 
 /* Estilos do texto sobreposto */
 #texto-sobreposto {
     position: absolute;
-    top: 50%; /* Centraliza verticalmente */
-    left: 50%; /* Centraliza horizontalmente */
-    transform: translate(-50%, -50%); /* Move o texto para o centro */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
-    color: white; /* Cor do texto */
+    color: white;
+    z-index: 1;
     background-color: transparent;
-    z-index: 1; /* Coloca o texto sobre a imagem */
 }
 
 #texto-sobreposto h1 {
-    font-size: 90px; /* Tamanho do título */
-    font-family: 'Oswald', sans-serif; /* Fonte do título */
-    margin-bottom: 10px; /* Espaçamento abaixo do título */
+    font-size: 90px;
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 10px;
     background-color: transparent;
 }
 
 #texto-sobreposto p {
-    font-size: 25px; /* Tamanho do texto */
-    font-family: 'Oswald', serif; /* Fonte do texto */
+    font-size: 25px;
+    font-family: 'Oswald', serif;
     background-color: transparent;
 }
 
 /* Estilos das fotos lado a lado */
-.fotos-container {
+#fotos-container {
     display: flex;
-    justify-content: space-between; /* Espaço igual entre as fotos */
-    margin-top: 30px;
+    justify-content: center;
+    margin: 30px 30px 0 30px;
+    gap: 30px;
+}
+
+#foto1, #foto2, #foto3 {
+    background-size: cover;
+    width: 400px;
+    height: 500px;
+    position: relative;
+    border-radius: 5px;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
 }
 
 #foto1 {
     background-image: url('https://universoheroico.com.br/wp-content/uploads/2022/03/Imagme-do-filme-Batman.jpg');
     background-position: 30% 50%;
-    background-size: cover;
-    width: 600px;
-    height: 800px;
-    position: relative;
-    border-radius: 5px;
-    margin-left: 10px;
 }
 
 #foto2 {
     background-image: url('https://cinemaweb.com.br/wp-content/uploads/2023/12/the-batman-robert-pattinson.jpg');
     background-position: 50% 50%;
-    background-size: cover;
-    width: 600px;
-    height: 800px;
-    position: relative;
-    border-radius: 5px;
-    margin-left: 10px;
 }
 
 #foto3 {
     background-image: url('https://s2.glbimg.com/lJEJ_rnqoTSiKQ542pPpVphEgOM=/e.glbimg.com/og/ed/f/original/2021/12/31/zoe_kravitz_catwoman.jpeg');
     background-position: 30% 50%;
+}
+
+/* Estilos dos atores */
+#atores {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.RobertPattinson,
+.ColinFarrell,
+.ZoeKravitz,
+.JeffreyWright,
+.PaulDano {
+    background-position: 50% 50%;
     background-size: cover;
-    width: 600px;
-    height: 800px;
+    width: 400px;
+    height: 500px;
     position: relative;
     border-radius: 5px;
-    margin-left: 10px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.name {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+
+/* Background images para cada ator */
+.RobertPattinson {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgt3BBtEAPcvn4xBCyDeLqH5hjUhz-k8kMYFoXPGy9v7_1TXX8');
+}
+
+.ColinFarrell {
+    background-image: url('https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTeqVaKoQS_WJ_uG-7nTUM1I4QHpbXpzgItpvbcUJU6KncDRFRg');
+}
+
+.ZoeKravitz {
+    background-image: url('https://media.allure.com/photos/6217a011e844b00b21ca2666/1:1/w_3280,h_3280,c_limit/Zoe%20Kravitz%20at%20The%20Batman%20Screening%20in%20London.jpg');
+}
+
+.JeffreyWright {
+    background-image: url('https://www.distrito13.com.br/wp-content/uploads/2012/09/Jeffrey-Wright-int%C3%A9rprete-de-Beetee-em-Em-Chamas.jpg');
+}
+
+.PaulDano {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/25/Paul_Dano_at_Berlinale_2024_Ausschnitt.jpg');
+}
+
+footer {
+    height: 300px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+span {
+    color: #ffffff;
+    font-family: "Oswald", sans-serif;
+    margin: -45px;
+}
+
+.footer-navigation {
+    text-align: center; /* Centraliza o conteúdo do nav */
+    display: none;
+}
+
+.footer-list {
+    list-style-type: none; /* Remove os marcadores da lista */
+    padding: 0; /* Remove o padding da lista */
+    margin: 0; /* Remove a margem da lista */
+    display: flex; /* Define a lista como flexível */
+    justify-content: center; /* Centraliza os itens da lista */
+}
+
+.footer-list li {
+    margin: 0 10px; /* Define uma margem horizontal entre os itens */
+}
+
+@media (max-width: 768px) { /* PARA DISPOSITIVOS MOBILE */
+    .footer-navigation {
+        display: block;
+    }
+
+    .logo2 {
+        width: 150px;
+        height: auto;
+        margin-bottom: 80px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .footer-list {
+        margin-bottom: 10px;
+    }
 }
