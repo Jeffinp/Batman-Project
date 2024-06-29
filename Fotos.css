@@ -386,6 +386,11 @@ span {
     transform: scale(1.008);
 }
 
+@media (max-width: 1024px) {
+    body {
+        background-position: 70% 15%;
+    }
+}
 
 /* Estilos para dispositivos móveis */
 @media (max-width: 768px) {

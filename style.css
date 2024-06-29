@@ -242,6 +242,13 @@ span {
     margin: 0 10px; /* Define uma margem horizontal entre os itens */
 }
 
+@media (max-width: 1024px) {
+    .description {
+        width: 150%;
+    }
+
+}
+
 @media (max-width: 768px) { /* PARA DISPOSITIVOS MOBILE */
     .footer-navigation {
         display: block;
