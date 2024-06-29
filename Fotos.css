@@ -389,6 +389,11 @@ span {
 
 /* Estilos para dispositivos móveis */
 @media (max-width: 768px) {
+    
+    body {
+        background-position: 70% 15%;
+    }
+
     /* Estilos para o container dos diretores em dispositivos móveis */
     .container {
         display: flex;
@@ -417,21 +422,23 @@ span {
 
     /* Estilos para o título no texto sobreposto em dispositivos móveis */
     #texto-sobreposto h1 {
-        font-size: 35px; /* Ajusta o tamanho da fonte para telas pequenas */
-        margin: 20px; /* Adiciona margem ao redor do texto */
+        font-size: 35px;
+        margin: 20px; 
+        color: #d21617;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.692); 
     }
 
     /* Estilos para o parágrafo no texto sobreposto em dispositivos móveis */
     #texto-sobreposto p {
-        font-size: 18px; /* Ajusta o tamanho da fonte do parágrafo */
-        margin: 10px; /* Adiciona margem ao redor do texto */
+        font-size: 18px; 
+        margin: 10px; 
     }
 
     /* Estilos para o logo no rodapé em dispositivos móveis */
     .logo2 {
-        width: 150px; /* Ajusta o tamanho do logo */
+        width: 150px; 
         height: auto;
-        margin-bottom: 80px; /* Adiciona margem inferior */
+        margin-bottom: 80px; 
     }
 
     /* Estilos para esconder a navegação principal em dispositivos móveis */
@@ -463,26 +470,26 @@ span {
 
     /* Estilos para cada foto individual em dispositivos móveis */
     #foto1, #foto2, #foto3 {
-        width: 90%; /* Ajusta a largura das fotos para caber melhor na tela */
-        height: 300px; /* Ajusta a altura automaticamente para manter a proporção */
-        margin-bottom: 5px; /* Espaço entre as fotos */
+        width: 90%; 
+        height: 300px; 
+        margin-bottom: 5px; 
     }
-
+    
     #atores {
         display: flex;
-        flex-direction: column; /* Faz com que as imagens dos atores fiquem uma abaixo da outra */
+        flex-direction: column; 
         align-items: center; /* Centraliza horizontalmente */
         justify-content: center; /* Centraliza verticalmente */
         gap: 20px; /* Espaço entre as imagens dos atores */
-        width: 90%; /* Limita a largura do container de atores */
-        margin: 50px auto 0 auto; /* Margem superior para afastar do título e centralizar */
-        padding-top: 20px; /* Espaçamento superior */
+        width: 90%;
+        margin: 50px auto 0 auto;
+        padding-top: 20px;
     }
 
     /* Estilos para cada ator individual em dispositivos móveis */
     .RobertPattinson, .ColinFarrell, .ZoeKravitz, .JeffreyWright, .PaulDano {
         width: 100%; /* Ocupa toda a largura do container pai */
-        height: 400px; /* Altura fixa para manter a proporção */
-        margin-bottom: 20px; /* Espaço entre as imagens dos atores */
+        height: 400px; 
+        margin-bottom: 20px; 
     }
 }
