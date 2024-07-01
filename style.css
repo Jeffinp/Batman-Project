@@ -260,7 +260,7 @@ footer p {
     #trailer-container, .content { width: 100%; flex-direction: column; }
     .trailer, #sinopse, .description { width: 92%; text-align: justify; }
     .cards-contents { grid-template-columns: 1fr; margin-top: 150px; }
-    /* Melhorando a acessibilidade */
+    /* Melhor acessibilidade */
     a:focus,
     button:focus {
         outline: 2px solid var(--accent-color);
