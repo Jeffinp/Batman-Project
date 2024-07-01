@@ -1,18 +1,31 @@
+/* Importação de fontes */
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Eczar:wght@400..800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
+/* Variáveis CSS para cores e fontes */
+:root {
+    --primary-color: #d21617;
+    --background-color: #000000;
+    --text-color: #ffffff;
+    --accent-color: #d21617;
+    --font-primary: 'Oswald', sans-serif;
+}
+
+/* Reset global */
 * {
     margin: 0;
     padding: 0;
-    background-color: #000000;
+    background-color: var(--background-color);
     list-style: none;
     text-decoration: none;
-    box-sizing: border-box; /* Garante que padding e border sejam incluídos no tamanho total dos elementos */
+    box-sizing: border-box;
 }
 
+/* Evita scroll horizontal */
 html, body {
-    overflow-x: hidden; /* Evita o scroll horizontal */
+    overflow-x: hidden;
 }
 
+/* Estilo do cabeçalho */
 header {
     height: 90px;
     display: flex;
@@ -35,21 +48,16 @@ li {
     cursor: pointer;
     font-size: 21px;
     transition: 0.5s;
-    font-family: "Oswald", sans-serif;
-}
-/* para remover o azul do link após ser  clicado*/
-li a:link {
-    color: inherit; /* Inherit the color from the li */
-    text-decoration: none; /* Remove underline */
+    font-family: var(--font-primary);
 }
 
-li a:visited { 
-    color: inherit; /* Inherit the color from the li */
-    text-decoration: none; /* Remove underline */
+li a {
+    color: inherit;
+    text-decoration: none;
 }
 
 li:hover {
-    color: #d21617;
+    color: var(--primary-color);
 }
 
 #logo {
@@ -57,7 +65,7 @@ li:hover {
     height: auto;
 }
 
-
+/* Estilo do banner */
 #Banner {
     background-image: url('https://t.ctcdn.com.br/BztkvPe1BQe3e-hdycrPDUKa5L4=/1024x576/smart/i586811.png');
     background-position: 50% 50%;
@@ -65,28 +73,26 @@ li:hover {
     width: 100%;
     height: 600px;
     position: relative;
-    overflow: hidden; /* Corta o pseudo-elemento que sai do container */
-    transition: transform 0.5s ease; /* Adiciona uma transição suave para o efeito de zoom */
+    overflow: hidden;
+    transition: transform 0.5s ease;
 }
 
 #Banner::after {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    transition: box-shadow 0.5s ease; /* Adiciona uma transição suave para o efeito de desfoque */
+    inset: 0;
+    transition: box-shadow 0.5s ease;
 }
 
 #Banner:hover {
-    transform: scale(1.002); /* Aplica um leve zoom ao passar o mouse */
+    transform: scale(1.002);
 }
 
 #Banner:hover::after {
-    box-shadow: inset 0 0 20px 10px rgba(83, 0, 0, 0.514); /* Aplica o efeito de bordas borradas */
+    box-shadow: inset 0 0 20px 10px rgba(83, 0, 0, 0.514);
 }
 
+/* Estilo do container do trailer */
 #trailer-container {
     width: 100%;
     height: 400px;
@@ -114,18 +120,19 @@ li:hover {
 }
 
 .description {
-    color: #ffffff;
+    color: var(--text-color);
     font-size: 20px;
-    font-family: "Oswald", sans-serif;
+    font-family: var(--font-primary);
     width: 90%;
 }
 
-
+/* Estilo do botão */
 .button {
     width: 13rem;
     height: 4rem;
-    background-color: #d21617;
-    color: #ffffff; /* Aplica a cor ao texto */
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    font-family: var(--font-primary);
     padding: 8px 10px;
     border-radius: 5px;
     cursor: pointer;
@@ -138,15 +145,16 @@ li:hover {
     border: none;
     outline: none;
     margin-top: 25px;
-    position: relative; /* Necessário para posicionamento do box-shadow */
+    position: relative;
 }
 
 .button:hover {
-    background-color: #ffffff;
-    color: #000000;
-    box-shadow: 0 0 10px 5px rgba(210, 22, 23, 0.7); /* Box-shadow com desfoque */
+    background-color: var(--text-color);
+    color: var(--background-color);
+    box-shadow: 0 0 10px 5px rgba(210, 22, 23, 0.7);
 }
 
+/* Estilo dos cards de atores */
 .actor-cards-container {
     width: 100%;
     display: flex;
@@ -158,8 +166,7 @@ li:hover {
     width: 90%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    row-gap: 20px;
-    column-gap: 40px;
+    gap: 20px 40px;
 }
 
 .card {
@@ -174,31 +181,25 @@ li:hover {
     flex-direction: column;
     justify-content: flex-end;
     padding: 0 0 20px 10px;
-    color: #ffffff;
+    color: var(--text-color);
     font-size: 19px;
     font-style: italic;
-    font-family: "Oswald", sans-serif;
-    position: relative; /* Para posicionamento do box-shadow */
-    overflow: hidden; /* Para que o box-shadow fique dentro dos limites da .card */
+    font-family: var(--font-primary);
+    position: relative;
+    overflow: hidden;
 }
 
 .card:hover {
     transform: scale(1.03);
-    box-shadow: 0 0 20px rgba(78, 78, 78, 0.5); /* Box-shadow com desfoque */
+    box-shadow: 0 0 20px rgba(78, 78, 78, 0.5);
 }
 
-.banner-1 {
-    background-image: url("./Imagens/batman-robert-pattinson-foto-divulgacao-warner-bros_fixed_large.webp");
-}
+/* Imagens de fundo para os cards */
+.banner-1 { background-image: url("./Imagens/batman-robert-pattinson-foto-divulgacao-warner-bros_fixed_large.webp"); }
+.banner-2 { background-image: url("https://criticalhits.com.br/wp-content/uploads/2022/03/zoe-kravitz-mulher-gato.jpg"); }
+.banner-3 { background-image: url("https://ovicio.com.br/wp-content/uploads/2020/12/20201218-jeffrey_wright_gotham_the_batman_hbo_max_commissioner_gordon.png"); }
 
-.banner-2 {
-    background-image: url("https://criticalhits.com.br/wp-content/uploads/2022/03/zoe-kravitz-mulher-gato.jpg");
-}
-
-.banner-3 {
-    background-image: url("https://ovicio.com.br/wp-content/uploads/2020/12/20201218-jeffrey_wright_gotham_the_batman_hbo_max_commissioner_gordon.png");
-}
-
+/* Estilo do footer */
 footer {
     height: 300px;
     margin-top: 50px;
@@ -209,25 +210,21 @@ footer {
     padding: 20px;
 }
 
-span {
-    color: #ffffff;
-    font-family: "Oswald", sans-serif;
+footer p {
+    color: var(--text-color);
+    font-family: var(--font-primary);
     margin: -45px;
 }
 
 .footer-navigation {
-    text-align: center; /* Centraliza o conteúdo do nav */
+    text-align: center;
     display: none;
 }
 
 .footer-list {
-    list-style-type: none; /* Remove os marcadores da lista */
-    padding: 0; /* Remove o padding da lista */
-    margin: 0; /* Remove a margem da lista */
-    display: flex; /* Define a lista como flexível */
-    justify-content: center; /* Centraliza os itens da lista */
+    display: flex;
+    justify-content: center;
 }
-
 
 .logo2 {
     width: 10rem;
@@ -241,184 +238,32 @@ span {
 }
 
 
-.assinatura {
-    margin-bottom: 2px;
-    background-color: transparent;
-}
 
+/* Media Queries */
 @media (max-width: 1024px) {
     .description {
         width: 150%;
     }
-
 }
 
-@media (max-width: 768px) { /* PARA DISPOSITIVOS MOBILE */
-    .footer-navigation {
-        display: block;
-    }
-
-    .trailer {
-        margin-top: 300px;
-        margin-left: 20px;
-    }
-
-    .button {
-        width: 100%;
-        margin-bottom: 90px;
-    }
-
-    .banner-1 {
-        margin-top: 45px;
-    }
-
-    .logo2 {
-        width: 150px;
-        height: auto;
-        margin-bottom: 80px;
-    }
-
-    .copyright {
-        margin-bottom: -50px;
-    }
-
-    .assinatura {
-        margin-bottom: 10px;
-    }
-
-    nav {
-        display: none;
-    }
-
-    .footer-list {
-        margin-bottom: 10px;
-        column-gap: 12px;
-    }
-
-    #Banner {
-        background-position: 40%;
-    }
-
-    #trailer-container {
-        width: 100%;
-        height: 400px;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .content {
-        width: 95%;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .trailer {
-        width: 100%;
-    }
-
-    #sinopse {
-        width: 95%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    .description {
-        width: 100%;
-    }
-
-    .cards-contents {
-        grid-template-columns: 1fr;
-        margin-top: 150px;
+@media (max-width: 768px) {
+    .footer-navigation { display: block; }
+    .trailer { margin-top: 300px; margin-left: 20px; margin-right: 20px; }
+    .button { width: 90%; margin-bottom: 90px;}
+    .banner-1 { margin-top: 45px; }
+    .logo2 { width: 150px; margin-bottom: 80px; }
+    .copyright { margin-bottom:  2.3rem; }
+    .assinatura { margin-bottom: 0.625rem; background-color: transparent;}
+    nav { display: none; }
+    .footer-list { margin-bottom: 10px; column-gap: 12px; }
+    #Banner { background-position: 40%; }
+    #trailer-container, .content { width: 100%; flex-direction: column; }
+    .trailer, #sinopse, .description { width: 92%; text-align: justify; }
+    .cards-contents { grid-template-columns: 1fr; margin-top: 150px; }
+    /* Melhorando a acessibilidade */
+    a:focus,
+    button:focus {
+        outline: 2px solid var(--accent-color);
+        outline-offset: 2px;
     }
 }
-
-
-/*
-@import: Importa a fonte "Kdam Thmor Pro" do Google Fonts. 
-
-* : Seleciona todos os elementos.
-    margin: Remove as margens.
-    padding: Remove os preenchimentos.
-    background-color: Define a cor de fundo para preto.
-    list-style: Remove os marcadores de lista.
-    text-decoration: Remove sublinhados de links.
-    box-sizing: Inclui padding e border no tamanho total dos elementos.
-    overflow-x: Oculta o scroll horizontal.
-
-header: Define o estilo do cabeçalho.
-    height: Define a altura.
-    display: Usa flexbox para layout.
-    justify-content: Espaça uniformemente os itens ao longo do eixo principal.
-    align-items: Centraliza os itens ao longo do eixo transversal.
-
-nav: Define o estilo do menu de navegação.
-    width: Define a largura do elemento nav.
-
-ul: Define o estilo da lista não ordenada.
-    width: Define a largura de 100%.
-    justify-content: Distribui os itens da lista uniformemente.
-
-li: Define o estilo dos itens da lista.
-    color: Define a cor do texto.
-    cursor: Define o cursor como ponteiro ao passar o mouse.
-    font-size: Define o tamanho da fonte.
-    transition: Define a duração da transição.
-    font-family: Define a fonte dos itens da lista.
-    border-radius: Define bordas arredondadas.
-
-.banner: Define o estilo do banner.
-    background-image: Define a imagem de fundo.
-    background-position: Centraliza a imagem.
-    background-size: Cobre todo o container.
-    width: Define a largura.
-    height: Define a altura.
-    position: Define a posição relativa.
-    overflow: Oculta conteúdo que sai do container.
-    transition: Define a transição suave para o efeito de zoom.
-
-::after: Define o estilo do pseudo-elemento.
-    content: Define um conteúdo vazio.
-    position: Define a posição absoluta.
-    top, left, right, bottom: Estica o pseudo-elemento para cobrir todo o banner.
-    transition: Define uma transição suave para o efeito de sombra.
-
-.content: Define o estilo do conteúdo.
-    width: Define a largura.
-    display: Usa flexbox para layout.
-    align-items: Centraliza os itens verticalmente.
-    justify-content: Espaça uniformemente os itens.
-
-.section: Define o estilo de uma seção específica.
-    width: Define a largura.
-    display: Usa flexbox para layout.
-    flex-direction: Define a direção da flexbox como coluna.
-    justify-content: Espaça uniformemente os itens.
-    margin-left: Adiciona margem à esquerda.
-
-.description: Define o estilo da descrição.
-    color: Define a cor do texto.
-    font-size: Define o tamanho da fonte.
-    font-family: Define a fonte.
-    width: Define a largura.
-    text-align: Alinha o texto de forma justificada.
-
-.button: Define o estilo do botão.
-    width: Define a largura.
-    height: Define a altura.
-    background-color: Define a cor de fundo.
-    color: Define a cor do texto.
-    padding: Define o preenchimento.
-    border-radius: Define bordas arredondadas.
-    cursor: Define o cursor como ponteiro ao passar o mouse.
-    transition: Define a duração da transição.
-    font-size: Define o tamanho da fonte.
-    display: Usa flexbox para layout.
-    justify-content: Centraliza o texto horizontalmente.
-    align-items: Centraliza o texto verticalmente.
-    font-weight: Define a espessura da fonte.
-    border: Remove a borda.
-    outline: Remove o contorno.
-    margin-top: Adiciona margem superior.
-    position: Define a posição relativa.
-*/

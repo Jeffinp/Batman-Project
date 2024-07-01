@@ -11,7 +11,7 @@
 <body>
     <header>
         <a href="./index.html">
-            <img id="logo" src="./Imagens/OIP.jpg" alt="Logo do batman">
+            <img id="logo" src="./Imagens/OIP.png" alt="Logo do batman">
         </a>
         <nav>
             <ul>
@@ -23,45 +23,49 @@
         </nav>
     </header>
 
-    <div id="Banner"></div>
+    <main>
+        <!-- Banner principal -->
+        <div id="Banner"></div>
 
-    <div id="trailer-container">
-        <div class="content">
-            <video controls class="trailer">
-                <source src="./Videos/THE BATMAN 2.mp4" type="video/mp4">
-                <p>Seu navegador não possui suporte para vídeos.</p>
-            </video>
-            <div id="sinopse">
-                <p class="description">
-                    <b>"Batman Returns" (1992)</b>, dirigido por <b>Tim Burton</b>, acompanha Bruce Wayne (Michael Keaton) enfrentando novos vilões em Gotham City. O grotesco Pinguim (Danny DeVito) e a sedutora Mulher-Gato (Michelle Pfeiffer) ameaçam a cidade com seus planos nefastos. Enquanto Batman tenta impedi-los, ele se envolve em uma teia de traição e sedução. O filme é conhecido por seu estilo visual sombrio e atuações marcantes.
-                </p>
-                <a href="Contatos.html"><button class="button">Comprar ingresso</button></a>
+        <!-- Seção do trailer e sinopse -->
+        <section id="trailer-container">
+            <div class="content">
+                <video controls class="trailer">
+                    <source src="./Videos/THE BATMAN 2.mp4" type="video/mp4">
+                    <p>Seu navegador não possui suporte para vídeos.</p>
+                </video>
+                <div id="sinopse">
+                    <p class="description">
+                        <strong>"Batman Returns" (1992)</strong>, dirigido por <strong>Tim Burton</strong>, acompanha Bruce Wayne (Michael Keaton) enfrentando novos vilões em Gotham City. O grotesco Pinguim (Danny DeVito) e a sedutora Mulher-Gato (Michelle Pfeiffer) ameaçam a cidade com seus planos nefastos. Enquanto Batman tenta impedi-los, ele se envolve em uma teia de traição e sedução. O filme é conhecido por seu estilo visual sombrio e atuações marcantes.
+                    </p>
+                    <a href="Contatos.html" class="button">Comprar ingresso</a>
+                </div>
             </div>
-        </div>
-    </div>
+        </section>
 
-    <div class="actor-cards-container">
-        <div class="cards-contents">
-            <div class="card banner-1">Robert Pattinson</div>
-            <div class="card banner-2">Zoe Kravitz - Mulher Gato</div>
-            <div class="card banner-3">Jeffrey Wright - Gordon</div>
-        </div>
-    </div>
+        <!-- Seção de cards dos atores -->
+        <section class="actor-cards-container">
+            <div class="cards-contents">
+                <div class="card banner-1">Robert Pattinson</div>
+                <div class="card banner-2">Zoe Kravitz - Mulher Gato</div>
+                <div class="card banner-3">Jeffrey Wright - Gordon</div>
+            </div>
+        </section>
+    </main>
 
-    <!-- configuração mobile --> 
     <footer>
         <nav class="footer-navigation">
             <ul class="footer-list">
                 <li><a href="./Index.html">Home</a></li>
                 <li><a href="./Contatos.html">Contatos</a></li>
                 <li><a href="./Fotos.html">Fotos</a></li>
-                <li class="Comentários"><a href="./Comentarios.html">Comentários</a></li>
+                <li><a href="./Comentarios.html">Comentários</a></li>
             </ul>
         </nav>
-        
-        <img class="logo2" style="object-fit: contain;" src="./Imagens/OIP.jpg" alt="Logo do batman">
-        <span class="copyright">Todos os direitos reservados ©</span>
-        <span class="assinatura">Desenvolvido por Jeferson Reis</span>
+    
+        <img class="logo2" src="./Imagens/OIP.png" alt="Logo do batman">
+        <p class="copyright">Todos os direitos reservados ©</p>
+        <p class="assinatura">Desenvolvido por Jeferson Reis</p>
     </footer>
 </body>
 </html>

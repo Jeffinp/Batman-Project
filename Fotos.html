@@ -10,7 +10,7 @@
 <body>
     <header>
         <a href="./index.html">
-            <img id="logo" src="./Imagens/OIP.jpg" alt="Logo do batman">
+            <img id="logo" src="./Imagens/OIP.png" alt="Logo do Batman">
         </a>
         <nav>
             <ul>
@@ -22,62 +22,62 @@
         </nav>
     </header>
 
-    
-    <div id="banner">
-        <div id="texto-sobreposto">
-            <h1>BATMAN PARTE 2 O FILME</h1>
-            <p>fotos e atores do filme</p>
-        </div>
-    </div>
-    
-    <div id="fotos-container">
-        <div id="foto1"></div>
-        <div id="foto2"></div>
-        <div id="foto3"></div>
-    </div>
-
-    <h1>Atores do filme</h1>
-
-    <div id="atores">
-        <div class="RobertPattinson">
-            <a href="https://www.google.com/search?q=Robert+Pattinson" target="_blank">
-                <div class="name">Robert Pattinson</div>
-            </a>
-        </div>
-        <div class="ColinFarrell">
-            <a href="https://www.google.com/search?q=Colin+Farrell" target="_blank">
-                <div class="name">Colin Farrell</div>
-            </a>
-        </div>
-        <div class="ZoeKravitz">
-            <a href="https://www.google.com/search?q=Zoe+Kravitz" target="_blank">
-                <div class="name">Zoe Kravitz</div>
-            </a>
-        </div>
-        <div class="JeffreyWright">
-            <a href="https://www.google.com/search?q=Jeffrey+Wright" target="_blank">
-                <div class="name">Jeffrey Wright</div>
-            </a>
-        </div>
-        <div class="PaulDano">
-            <a href="https://www.google.com/search?q=Paul+Dano" target="_blank">
-                <div class="name">Paul Dano</div>
-            </a>
-        </div>
-    </div>
-
-    <div class="diretores">
-        <div class="container">
-            <div class="MattReeves">
-                <div class="name">Matt Reeves</div>
+    <main>
+        <section id="banner">
+            <div id="texto-sobreposto">
+                <h1>BATMAN PARTE 2 O FILME</h1>
+                <p>Fotos e atores do filme</p>
             </div>
-            <div class="biografia">
-                <p>Matt Reeves, nascido em 27 de abril de 1966, é um cineasta norte-americano. Aos 58 anos, ele é conhecido por seu trabalho em filmes de ficção científica e terror. Reeves ganhou destaque com "Cloverfield" (2008) e "Let Me In" (2010). Ele dirigiu "Dawn of the Planet of the Apes" (2014) e "War for the Planet of the Apes" (2017), ambos aclamados pela crítica. Em 2022, ele trouxe uma nova visão ao universo do Cavaleiro das Trevas com "The Batman", estrelado por Robert Pattinson.</p>
-            </div>
-        </div>
-    </div>
+        </section>
 
-    <!-- Configuração mobile --> 
+        <section id="fotos-container">
+            <figure class="foto" id="foto1"></figure>
+            <figure class="foto" id="foto2"></figure>
+            <figure class="foto" id="foto3"></figure>
+        </section>
+
+        <h2>Atores do filme</h2>
+
+        <section id="atores">
+            <figure class="ator RobertPattinson">
+                <a href="https://www.google.com/search?q=Robert+Pattinson" target="_blank" aria-label="Pesquisar Robert Pattinson">
+                    <figcaption>Robert Pattinson</figcaption>
+                </a>
+            </figure>
+            <figure class="ator ColinFarrell">
+                <a href="https://www.google.com/search?q=Colin+Farrell" target="_blank" aria-label="Pesquisar Colin Farrell">
+                    <figcaption>Colin Farrell</figcaption>
+                </a>
+            </figure>
+            <figure class="ator ZoeKravitz">
+                <a href="https://www.google.com/search?q=Zoe+Kravitz" target="_blank" aria-label="Pesquisar Zoe Kravitz">
+                    <figcaption>Zoe Kravitz</figcaption>
+                </a>
+            </figure>
+            <figure class="ator JeffreyWright">
+                <a href="https://www.google.com/search?q=Jeffrey+Wright" target="_blank" aria-label="Pesquisar Jeffrey Wright">
+                    <figcaption>Jeffrey Wright</figcaption>
+                </a>
+            </figure>
+            <figure class="ator PaulDano">
+                <a href="https://www.google.com/search?q=Paul+Dano" target="_blank" aria-label="Pesquisar Paul Dano">
+                    <figcaption>Paul Dano</figcaption>
+                </a>
+            </figure>
+        </section>
+
+        <section class="diretores">
+            <div class="container">
+                <figure class="MattReeves">
+                    <figcaption>Matt Reeves</figcaption>
+                </figure>
+                <div class="biografia">
+                    <p>Matt Reeves, nascido em 27 de abril de 1966, é um cineasta norte-americano. Aos 58 anos, ele é conhecido por seu trabalho em filmes de ficção científica e terror. Reeves ganhou destaque com "Cloverfield" (2008) e "Let Me In" (2010). Ele dirigiu "Dawn of the Planet of the Apes" (2014) e "War for the Planet of the Apes" (2017), ambos aclamados pela crítica. Em 2022, ele trouxe uma nova visão ao universo do Cavaleiro das Trevas com "The Batman", estrelado por Robert Pattinson.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <footer>
         <nav class="footer-navigation">
             <ul class="footer-list">
@@ -88,9 +88,9 @@
             </ul>
         </nav>
         
-        <img class="logo2" style="object-fit: contain;" src="./Imagens/OIP.jpg" alt="Logo do batman">
-        <span class="copyright">Todos os direitos reservados ©</span>
-        <span class="assinatura">Desenvolvido por Jeferson Reis</span>
+        <img class="logo2" src="./Imagens/OIP.png" alt="Logo do Batman">
+        <p class="copyright">Todos os direitos reservados ©</p>
+        <p class="assinatura">Desenvolvido por Jeferson Reis</p>
     </footer>
 </body>
 </html>

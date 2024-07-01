@@ -1,281 +1,189 @@
-/* Importação de fontes do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Eczar:wght@400..800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
-/* Reset de estilos básicos */
+:root {
+    --primary-color: #000000;
+    --secondary-color: #ffffff;
+    --accent-color: #d21617;
+    --main-font: 'Oswald', sans-serif;
+    --secondary-font: 'Merriweather', serif;
+}
+
 * {
     margin: 0;
     padding: 0;
-    background-color: #000000;
-    list-style: none;
-    text-decoration: none;
     box-sizing: border-box;
 }
 
-
-/* Estilos globais para HTML e BODY */
-html, body {
-    overflow-x: hidden; /* Previne a rolagem horizontal */
+body {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-family: var(--main-font);
+    overflow-x: hidden;
+    background-image: url('./Imagens/the-batman-2021-movie-batman-minimal-art-wallpaper-2560x1080_14.jpg');
+    background-position: center top;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
-/* Estilos para o cabeçalho */
-header {
-    height: 90px;
+header, footer {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    background-color: #000;
 }
 
-/* Estilos para a navegação */
+header {
+    height: 90px;
+}
+
 nav {
     width: 60%;
 }
 
-ul {
+nav ul {
     display: flex;
-    width: 100%;
     justify-content: space-between;
+    list-style: none;
 }
 
-li {
-    color: #f0f8ff;
-    cursor: pointer;
-    font-size: 21px;
-    transition: 0.5s;
-    font-family: "Oswald", sans-serif;
+nav a {
+    color: inherit;
+    text-decoration: none;
+    font-size: 1.3rem;
+    transition: color 0.5s;
 }
 
-/* para remover o azul do link após ser  clicado*/
-li a:link {
-    color: inherit; 
-    text-decoration: none; 
+nav a:hover {
+    color: var(--accent-color);
 }
 
-li a:visited { 
-    color: inherit; 
-    text-decoration: none; 
-}
-
-li:hover {
-    color: #d21617;
-}
-
-/* Estilos para o logo */
 #logo {
     width: 8rem;
     height: auto;
 }
 
-body {
-    background-image: url('./Imagens/the-batman-2021-movie-batman-minimal-art-wallpaper-2560x1080_14.jpg');
-    background-position: center top;
-    background-size: cover;
-    background-attachment: fixed; /* Mantém a imagem fixa enquanto rola a página */
-    background-repeat: no-repeat;
-    color: white; /* Cor do texto sobre o fundo */
-    font-family: 'Arial', sans-serif; /* Fonte do texto */
+h1, h2 {
+    font-family: var(--main-font);
+    text-align: center;
+    margin: 1.5rem 0;
 }
 
-.banner-text {
-    text-align: center; /* Centraliza o texto na página */
-    padding: 20px; /* Espaçamento interno */
-    font-size: 24px; /* Tamanho da fonte */
-    font-weight: bold; /* Negrito */
-    background-color: rgba(190, 61, 61, 0.048); /* Fundo semi-transparente */
-}
-
-
-/* Estilos para o título principal */
-h1 {
-    font-family: Oswald, sans-serif;
-    display: flex;
-    justify-content: center;
-    color: white;
-    margin-top: 25px; /* Ajuste a margem superior para 25px */
-    margin-bottom: -20px; /* Ajuste a margem inferior para -20px */
-    background-color: transparent;
-}
-
-/* Estilos do banner */
 #banner {
     background-image: url('https://adnews.com.br/wp-content/uploads/2022/02/The-Batman-saiba-tudo-o-que-esperar-do-filme-.jpg');
     background-position: 50% 50%;
     background-size: cover;
-    width: 100%;
     height: 32rem;
     position: relative;
     overflow: hidden;
     transition: transform 0.5s ease;
 }
 
-#banner::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    transition: box-shadow 0.5s ease;
-}
-
 #banner:hover {
     transform: scale(1.002);
-    overflow: hidden;
 }
 
-/* Estilos do texto sobreposto no banner */
 #texto-sobreposto {
-    background-color: transparent;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    color: white;
-    z-index: 1;
+    color: var(--secondary-color);
 }
 
 #texto-sobreposto h1 {
-    background-color: transparent;
-    font-size: 90px;
-    font-family: 'Oswald', sans-serif;
-    margin-bottom: 10px;
+    font-size: 5.6rem;
+    margin-bottom: 0.6rem;
 }
 
 #texto-sobreposto p {
-    background-color: transparent;
-    font-size: 25px;
-    font-family: 'Oswald', serif;
+    font-size: 1.6rem;
 }
 
-/* Estilos para o container das fotos */
 #fotos-container {
     display: flex;
     justify-content: center;
-    margin: 30px 30px 0 30px;
-    gap: 30px;
-    background-color: transparent;
+    gap: 1.9rem;
+    margin: 1.9rem;
 }
 
-/* Estilos para cada foto individual */
-#foto1, #foto2, #foto3 {
+.foto {
     background-size: cover;
     width: 25rem;
     height: 32rem;
-    position: relative;
     border-radius: 5px;
-    display: flex;
-    align-items: flex-end;
-    overflow: hidden;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background-color: transparent;
 }
 
-/* Efeito de hover nas fotos */
-#foto1:hover, #foto2:hover, #foto3:hover {
+.foto:hover {
     transform: scale(1.03);
     box-shadow: 0 0 20px rgba(78, 78, 78, 0.5);
 }
 
-#foto1 {
-    background-image: url('https://universoheroico.com.br/wp-content/uploads/2022/03/Imagme-do-filme-Batman.jpg');
-    background-position: 30% 50%;
-}
+#foto1 { background-image: url('https://universoheroico.com.br/wp-content/uploads/2022/03/Imagme-do-filme-Batman.jpg'); background-position: 30% 50%; }
+#foto2 { background-image: url('https://cinemaweb.com.br/wp-content/uploads/2023/12/the-batman-robert-pattinson.jpg'); background-position: 50% 50%; }
+#foto3 { background-image: url('https://s2.glbimg.com/lJEJ_rnqoTSiKQ542pPpVphEgOM=/e.glbimg.com/og/ed/f/original/2021/12/31/zoe_kravitz_catwoman.jpeg'); background-position: 30% 50%; }
 
-#foto2 {
-    background-image: url('https://cinemaweb.com.br/wp-content/uploads/2023/12/the-batman-robert-pattinson.jpg');
-    background-position: 50% 50%;
-}
-
-#foto3 {
-    background-image: url('https://s2.glbimg.com/lJEJ_rnqoTSiKQ542pPpVphEgOM=/e.glbimg.com/og/ed/f/original/2021/12/31/zoe_kravitz_catwoman.jpeg');
-    background-position: 30% 50%;
-     background-color: transparent;
-}
-
-/* Estilos para a seção de atores */
 #atores {
-    margin-top: 50px;
     display: flex;
     justify-content: center;
-    gap: 10px;
     flex-wrap: wrap;
-    background-color: transparent;
+    gap: 0.6rem;
+    margin-top: 3.1rem;
 }
 
-/* Estilos para cada ator individual */
-.RobertPattinson,
-.ColinFarrell,
-.ZoeKravitz,
-.JeffreyWright,
-.PaulDano {
+.ator {
     background-position: 50% 50%;
     background-size: cover;
     width: 25rem;
     height: 32rem;
-    position: relative;
     border-radius: 5px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    overflow: hidden;
+    position: relative;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background-color: transparent;
 }
 
-/* Efeito de hover nos atores */
-.RobertPattinson:hover,
-.ColinFarrell:hover,
-.ZoeKravitz:hover,
-.JeffreyWright:hover,
-.PaulDano:hover {
+.ator:hover {
     transform: scale(1.03);
     box-shadow: 0 0 20px rgba(78, 78, 78, 0.5);
 }
 
-/* Estilos para o nome do ator sobre a imagem */
-.name {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 10px;
-    width: 100%;
-    text-align: center;
-    font-size: 20px;
-    box-sizing: border-box;
-    font-family: 'Oswald', sans-serif;
+.ator figcaption {
     position: absolute;
     bottom: 0;
     left: 0;
-    z-index: 1;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--secondary-color);
+    padding: 0.6rem;
+    text-align: center;
+    font-size: 1.25rem;
     transition: background-color 0.3s ease;
-    
 }
 
-/* Efeito de hover no nome do ator */
-.RobertPattinson:hover .name,
-.ColinFarrell:hover .name,
-.ZoeKravitz:hover .name,
-.JeffreyWright:hover .name,
-.PaulDano:hover .name {
+.ator:hover figcaption {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Estilos para o container dos diretores */
+.RobertPattinson { background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgt3BBtEAPcvn4xBCyDeLqH5hjUhz-k8kMYFoXPGy9v7_1TXX8'); }
+.ColinFarrell { background-image: url('https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTeqVaKoQS_WJ_uG-7nTUM1I4QHpbXpzgItpvbcUJU6KncDRFRg'); }
+.ZoeKravitz { background-image: url('https://media.allure.com/photos/6217a011e844b00b21ca2666/1:1/w_3280,h_3280,c_limit/Zoe%20Kravitz%20at%20The%20Batman%20Screening%20in%20London.jpg'); }
+.JeffreyWright { background-image: url('https://www.distrito13.com.br/wp-content/uploads/2012/09/Jeffrey-Wright-int%C3%A9rprete-de-Beetee-em-Em-Chamas.jpg'); }
+.PaulDano { background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/25/Paul_Dano_at_Berlinale_2024_Ausschnitt.jpg'); }
+
 .diretores {
     display: flex;
     justify-content: center;
-    background-color: transparent;
 }
 
-/* Estilos para o container e imagem do Matt Reeves */
 .container {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center; /* Centraliza a imagem e o texto */
-    flex-direction: column; /* Coloca a imagem e o texto um embaixo do outro */
-    text-align: center; /* Centraliza o texto */
-    background-color: transparent;
+    text-align: center;
+    max-width: 25rem;
 }
 
 .MattReeves {
@@ -284,105 +192,53 @@ h1 {
     background-size: cover;
     width: 25rem;
     height: 32rem;
-    position: relative;
     border-radius: 5px;
-    display: flex;
-    align-items: flex-end;
-    overflow: hidden;
-    margin-top: 50px;
-    margin-bottom: 20px; /* Espaço entre a imagem e o texto */
+    margin: 3.1rem 0 1.25rem;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background-color: transparent;
 }
 
-/* Efeito de hover no container do Matt Reeves */
 .MattReeves:hover {
     transform: scale(1.03);
     box-shadow: 0 0 20px rgba(78, 78, 78, 0.5);
-    background-color: transparent;
 }
 
 .biografia {
-    background-color: transparent;
-    color: white; /* Cor do texto */
-    font-family: 'Oswald', sans-serif; /* Fonte do texto */
-    max-width: 400px; /* Limita a largura do texto */
-    font-size: 18px;
-    
+    font-family: var(--secondary-font);
+    font-size: 1.125rem;
+    max-width: 25rem;
 }
 
-p {
-    background-color: transparent;
-}
-
-/* Background images para cada ator */
-.RobertPattinson {
-    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgt3BBtEAPcvn4xBCyDeLqH5hjUhz-k8kMYFoXPGy9v7_1TXX8');
-    
-}
-
-.ColinFarrell {
-    background-image: url('https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTeqVaKoQS_WJ_uG-7nTUM1I4QHpbXpzgItpvbcUJU6KncDRFRg');
-}
-
-.ZoeKravitz {
-    background-image: url('https://media.allure.com/photos/6217a011e844b00b21ca2666/1:1/w_3280,h_3280,c_limit/Zoe%20Kravitz%20at%20The%20Batman%20Screening%20in%20London.jpg');
-}
-
-.JeffreyWright {
-    background-image: url('https://www.distrito13.com.br/wp-content/uploads/2012/09/Jeffrey-Wright-int%C3%A9rprete-de-Beetee-em-Em-Chamas.jpg');
-}
-
-.PaulDano {
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/25/Paul_Dano_at_Berlinale_2024_Ausschnitt.jpg');
-}
-
-
-/* Estilos para o rodapé */
 footer {
-    height: 300px;
-    margin-top: 50px;
-    display: flex;
+    height: 18.75rem;
+    margin-top: 3.1rem;
     flex-direction: column;
-    align-items: center;
     justify-content: space-around;
-    padding: 20px;
-}
-
-span {
-    color: #ffffff;
-    font-family: "Oswald", sans-serif;
-    margin: -45px;
+    padding: 1.25rem;
+    background-color: #000;
 }
 
 .footer-navigation {
-    text-align: center; /* Centraliza o conteúdo do nav */
     display: none;
-}
-
-.footer-list {
-    list-style-type: none; /* Remove os marcadores da lista */
-    padding: 0; /* Remove o padding da lista */
-    margin: 0; /* Remove a margem da lista */
-    display: flex; /* Define a lista como flexível */
-    justify-content: center; /* Centraliza os itens da lista */
 }
 
 .logo2 {
     width: 10rem;
     height: auto;
-    border-radius: 500px;
-    transition: 0.5s;
+    border-radius: 50%;
+    transition: transform 0.5s;
 }
 
 .logo2:hover {
     transform: scale(1.008);
 }
 
-.assinatura {
-    margin-bottom: 2px;
-    background-color: transparent;
+.copyright, .assinatura {
+    font-family: var(--main-font);
+}
+
+.copyright {
+    margin-bottom: -20px;
 }
 
 @media (max-width: 1024px) {
@@ -391,109 +247,140 @@ span {
     }
 }
 
-/* Estilos para dispositivos móveis */
 @media (max-width: 768px) {
-    
     body {
         background-position: 70% 15%;
     }
 
-    /* Estilos para o container dos diretores em dispositivos móveis */
     .container {
-        display: flex;
-        flex-direction: column; /* Coloca a imagem e o texto um abaixo do outro */
-        align-items: center; /* Centraliza horizontalmente */
-        text-align: center; /* Centraliza o texto */
-    }
-
-    /* Estilos para a imagem do Matt Reeves em dispositivos móveis */
-    .MattReeves {
-        width: 90%; /* Ajusta a largura da imagem */
-    }
-
-    /* Estilos para a biografia em dispositivos móveis */
-    .biografia {
-        margin-top: 20px; /* Espaço entre a imagem e o texto */
-        margin-left: 0; /* Remove a margem à esquerda */
-        width: 90%; /* Ajusta a largura do texto */
-        font-size: 19px;
-    }
-
-    /* Estilos para a navegação do rodapé em dispositivos móveis */
-    .footer-navigation {
-        display: block; /* Exibe a navegação em dispositivos menores */
-    }
-
-    /* Estilos para o título no texto sobreposto em dispositivos móveis */
-    #texto-sobreposto h1 {
-        font-size: 35px;
-        margin: 20px; 
-        color: #d21617;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.692); 
-    }
-
-    /* Estilos para o parágrafo no texto sobreposto em dispositivos móveis */
-    #texto-sobreposto p {
-        font-size: 18px; 
-        margin: 10px; 
-    }
-
-    
-    .logo2 {
-        width: 150px; 
-        height: auto;
-        margin-bottom: 80px; 
-    }
-
-  
-    nav {
-        display: none;
-    }
-
-   
-    .copyright {
-        margin-bottom: -50px;
-    }
-
-    
-    .assinatura {
-        margin-bottom: 10px;
-    }
-
-
-    .footer-list {
-        margin-bottom: 10px;
-        column-gap: 12px;
-    }
-
-    #fotos-container {
-        display: flex;
-        flex-direction: column; /* Faz com que as fotos fiquem uma abaixo da outra */
-        align-items: center;
-    }
-
-   
-    #foto1, #foto2, #foto3 {
-        width: 90%; 
-        height: 300px; 
-        margin-bottom: 5px; 
-    }
-    
-    #atores {
-        display: flex;
-        flex-direction: column; 
-        align-items: center; /* Centraliza horizontalmente */
-        justify-content: center; /* Centraliza verticalmente */
-        gap: 20px; /* Espaço entre as imagens dos atores */
         width: 90%;
-        margin: 50px auto 0 auto;
-        padding-top: 20px;
     }
 
-    /* Estilos para cada ator individual em dispositivos móveis */
-    .RobertPattinson, .ColinFarrell, .ZoeKravitz, .JeffreyWright, .PaulDano {
-        width: 100%; /* Ocupa toda a largura do container pai */
-        height: 25rem;
-        margin-bottom: 20px; 
+    .MattReeves {
+        width: 100%;
     }
-}
+
+    .biografia {
+        width: 100%;
+        font-size: 1.19rem;
+    }
+
+    .footer-navigation {
+        display: block;
+    }
+
+    #texto-sobreposto h1 {
+        font-size: 2.19rem;
+        margin: 1.25rem;
+        color: var(--accent-color);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.692);
+    }
+
+    #texto-sobreposto p {
+        font-size: 1.125rem;
+        margin: 0.625rem;
+    }
+
+    .logo2 {
+        width: 9.375rem;
+        margin-bottom: 5rem;
+    }
+
+        nav {
+            display: none;
+        }
+    
+        .copyright {
+            margin-bottom: -0.125rem;
+        }
+    
+        .assinatura {
+            margin-bottom: 0.62rem;
+        }
+    
+        .footer-list {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            margin-bottom: 0.625rem;
+        }
+    
+        #fotos-container {
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .foto {
+            width: 90%;
+            height: 18.75rem;
+            margin-bottom: 0.3125rem;
+        }
+        
+        #atores {
+            flex-direction: column;
+            align-items: center;
+            width: 90%;
+            margin: 3.125rem auto 0;
+            padding-top: 1.25rem;
+        }
+    
+        .ator {
+            width: 100%;
+            height: 25rem;
+            margin-bottom: 1.25rem;
+        }
+    }
+    
+    /* algumas melhorias gerais */
+    html {
+        font-size: 16px;
+    }
+    
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+    
+    .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+    }
+    
+    /* Melhorando a acessibilidade */
+    a:focus,
+    button:focus {
+        outline: 2px solid var(--accent-color);
+        outline-offset: 2px;
+    }
+    
+    /* Otimizando para impressão */
+    @media print {
+        body {
+            background-image: none;
+            color: #000;
+        }
+    
+        #banner,
+        .foto,
+        .ator,
+        footer nav {
+            display: none;
+        }
+    
+        .biografia {
+            font-size: 12pt;
+            line-height: 1.5;
+        }
+    }
