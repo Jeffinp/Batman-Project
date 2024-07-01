@@ -58,17 +58,6 @@ li:hover {
 }
 
 
-.logo2 {
-    width: 10rem;
-    height: auto;
-    border-radius: 500px;
-    transition: 0.5s;
-}
-
-.logo2:hover {
-    transform: scale(1.008);
-}
-
 #Banner {
     background-image: url('https://t.ctcdn.com.br/BztkvPe1BQe3e-hdycrPDUKa5L4=/1024x576/smart/i586811.png');
     background-position: 50% 50%;
@@ -217,6 +206,7 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    padding: 20px;
 }
 
 span {
@@ -238,10 +228,17 @@ span {
     justify-content: center; /* Centraliza os itens da lista */
 }
 
-.footer-list li {
-    margin: 0 10px; /* Define uma margem horizontal entre os itens */
+
+.logo2 {
+    width: 10rem;
+    height: auto;
+    border-radius: 500px;
+    transition: 0.5s;
 }
 
+.logo2:hover {
+    transform: scale(1.008);
+}
 
 
 .assinatura {
@@ -295,6 +292,7 @@ span {
 
     .footer-list {
         margin-bottom: 10px;
+        column-gap: 12px;
     }
 
     #Banner {

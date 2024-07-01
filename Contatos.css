@@ -12,18 +12,15 @@
 /* Estilos para o cabeçalho */
 
 header {
-    top: 0;
-    height: 100px;
-    width: 100%;
+    height: 90px;
     display: flex;
+    justify-content: space-around;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 240px;
-    background-color: #000000;
-    z-index: 1;
+    background-color: black;
+    position: relative;
+    z-index: 2; 
 }
 
-/* Estilos para a navegação */
 nav {
     width: 60%;
 }
@@ -41,6 +38,7 @@ li {
     transition: 0.5s;
     font-family: "Oswald", sans-serif;
 }
+
 
 li a:link {
     color: inherit; 
@@ -63,7 +61,7 @@ li:hover {
 }
 .modal {
     width: 100%;
-    height: 130vh;
+    height: 1300px;
     position: absolute;
     background-color: rgba(0, 0, 0, 0.795);
 }
@@ -225,6 +223,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 20px;
     justify-content: space-around;
 }
 
@@ -247,17 +246,17 @@ span {
     justify-content: center; /* Centraliza os itens da lista */
 }
 
-.footer-list li {
-    margin: 0 10px; /* Define uma margem horizontal entre os itens */
-}
 
 .logo2 {
     width: 10rem;
     height: auto;
-    margin-bottom: 10px;
-    
+    border-radius: 500px;
+    transition: 0.5s;
 }
 
+.logo2:hover {
+    transform: scale(1.008);
+}
 .assinatura {
     margin-bottom: 2px;
 }
@@ -267,18 +266,14 @@ span {
         display: block;
     }
 
-    .trailer {
-        margin-top: 300px;
-        margin-left: 20px;
-    }
 
     .button {
         width: 100%;
         margin-bottom: 90px;
     }
 
-    .banner-1 {
-        margin-top: 45px;
+    .modal {
+        height: 1400px;
     }
 
     .logo2 {
@@ -301,42 +296,6 @@ span {
 
     .footer-list {
         margin-bottom: 10px;
-    }
-
-    #Banner {
-        background-position: 40%;
-    }
-
-    #trailer-container {
-        width: 100%;
-        height: 400px;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .content {
-        width: 95%;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .trailer {
-        width: 100%;
-    }
-
-    #sinopse {
-        width: 95%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    .description {
-        width: 100%;
-    }
-
-    .cards-contents {
-        grid-template-columns: 1fr;
-        margin-top: 150px;
+        column-gap: 12px;
     }
 }

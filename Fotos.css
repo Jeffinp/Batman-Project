@@ -347,20 +347,18 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    padding: 20px;
 }
 
-/* Estilos para os itens do rodapé */
 span {
     color: #ffffff;
     font-family: "Oswald", sans-serif;
-    margin: -45px; /* Ajusta a margem */
-
+    margin: -45px;
 }
 
-/* Estilos para a navegação do rodapé */
 .footer-navigation {
     text-align: center; /* Centraliza o conteúdo do nav */
-    display: none; /* Esconde a navegação em dispositivos menores */
+    display: none;
 }
 
 .footer-list {
@@ -371,11 +369,6 @@ span {
     justify-content: center; /* Centraliza os itens da lista */
 }
 
-.footer-list li {
-    margin: 0 10px; /* Define uma margem horizontal entre os itens */
-}
-
-/* Estilos para o logo no rodapé */
 .logo2 {
     width: 10rem;
     height: auto;
@@ -445,41 +438,41 @@ span {
         margin: 10px; 
     }
 
-    /* Estilos para o logo no rodapé em dispositivos móveis */
+    
     .logo2 {
         width: 150px; 
         height: auto;
         margin-bottom: 80px; 
     }
 
-    /* Estilos para esconder a navegação principal em dispositivos móveis */
+  
     nav {
         display: none;
     }
 
-    /* Estilos para o texto de direitos autorais no rodapé em dispositivos móveis */
+   
     .copyright {
         margin-bottom: -50px;
     }
 
-    /* Estilos para a assinatura no rodapé em dispositivos móveis */
+    
     .assinatura {
         margin-bottom: 10px;
     }
 
-    /* Estilos para a lista no rodapé em dispositivos móveis */
+
     .footer-list {
         margin-bottom: 10px;
+        column-gap: 12px;
     }
 
-    /* Estilos para o container de fotos em dispositivos móveis */
     #fotos-container {
         display: flex;
         flex-direction: column; /* Faz com que as fotos fiquem uma abaixo da outra */
         align-items: center;
     }
 
-    /* Estilos para cada foto individual em dispositivos móveis */
+   
     #foto1, #foto2, #foto3 {
         width: 90%; 
         height: 300px; 

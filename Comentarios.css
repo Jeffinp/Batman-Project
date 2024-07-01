@@ -70,7 +70,7 @@ li:hover {
 
 .modal {
     width: 100%;
-    height: 100%;
+    height: 1300px;
     position: fixed;
     top: 0;
     left: 0;
@@ -92,7 +92,7 @@ li:hover {
 }
 
 .comments-container {
-    max-width: 800px;
+    max-width: 50rem;
     margin: 0 auto 40px;
     position: relative; /* usar a posição relativa para manter o objeto na frente */
     z-index: 3; /* para o obj ficar na frente, quanto maior o valor, mais para a frente o objeto vai, funciona como camadas */
@@ -118,7 +118,7 @@ li:hover {
 }
 
 #comment-form {
-    max-width: 800px;
+    max-width: 50rem;
     margin: 0 auto;
     text-align: left;
 }
@@ -141,50 +141,49 @@ li:hover {
 }
 
 #comment-form button {
+    width: 8rem;
+    height: 3rem;
     background-color: #d21617;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 18px;
-    transition: background-color 0.3s;
+    color: #ffffff; /* Aplica a cor ao texto */
+    padding: 8px 10px;
     border-radius: 5px;
+    cursor: pointer;
+    transition: 0.8s;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    margin-top: 20px;
+    position: relative;
+
 }
 
 #comment-form button:hover {
-    background-color: #a30d10;
+    background-color: #ffffff;
+    color: #000000;
+    box-shadow: 0 0 10px 5px rgba(210, 22, 23, 0.7); /* Box-shadow com desfoque */
 }
 
 footer {
-    margin-top: 40px;
-    padding: 20px;
-    text-align: center;
+    height: 300px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
     background-color: rgb(0, 0, 0); /* Fundo escuro */
+    padding: 20px;
     position: relative;
     z-index: 2; /* Mantém o footer na frente do fundo escuro */
 }
 
-.footer-navigation {
-    margin-bottom: 20px;
-}
-
-.footer-list {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-list li {
-    display: inline;
-    margin: 0 10px;
-}
-
-.footer-list a {
-    color: #d21617;
-    text-decoration: none;
-}
-
-.footer-list a:hover {
-    text-decoration: underline;
+span {
+    color: #ffffff;
+    font-family: "Oswald", sans-serif;
+    margin: -45px; /* Ajuste negativo para sobrepor o conteúdo acima */
 }
 
 .footer-navigation {
@@ -200,17 +199,15 @@ footer {
     justify-content: center; /* Centraliza os itens da lista */
 }
 
-.footer-list li {
-    margin: 0 10px; /* Define uma margem horizontal entre os itens */
-}
-
-
 .logo2 {
     width: 10rem;
     height: auto;
-    margin-bottom: 10px;
-    display: block;
-    margin: 20px auto;
+    border-radius: 500px; /* Arredonda a imagem */
+    transition: 0.5s; /* Suaviza a transição */
+}
+
+.logo2:hover {
+    transform: scale(1.008); /* Efeito de escala no hover */
 }
 
 .assinatura {
@@ -223,9 +220,18 @@ footer {
         display: block;
     }
 
-    .trailer {
-        margin-top: 300px;
-        margin-left: 20px;
+    .comment {
+        width: 90%;
+        margin: 0 auto; /* Centraliza horizontalmente */
+        margin-bottom: 20px;
+        display: flex;
+        display: block;
+    }
+    
+    #comment-form {
+        width: 90%;      
+        display: flex;
+        display: block;
     }
 
     .button {
@@ -233,14 +239,20 @@ footer {
         margin-bottom: 90px;
     }
 
-    .banner-1 {
-        margin-top: 45px;
-    }
 
     .logo2 {
         width: 150px;
         height: auto;
         margin-bottom: 80px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .footer-list {
+        margin-bottom: 10px;
+        column-gap: 12px;
     }
 
     .copyright {
