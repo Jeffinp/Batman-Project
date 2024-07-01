@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Eczar:wght@400..800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    background-color: #000000;
+}
+
+/* Estilos para o cabeçalho */
+
+header {
+    top: 0;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 240px;
+    background-color: #000000;
+    z-index: 1;
+}
+
+/* Estilos para a navegação */
+nav {
+    width: 60%;
+}
+
+ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+li {
+    color: #f0f8ff;
+    cursor: pointer;
+    font-size: 21px;
+    transition: 0.5s;
+    font-family: "Oswald", sans-serif;
+}
+
+li a:link {
+    color: inherit; 
+    text-decoration: none; 
+}
+
+li a:visited { 
+    color: inherit; 
+    text-decoration: none; 
+}
+
+li:hover {
+    color: #d21617;
+}
+
+/* Estilos para o logo */
+#logo {
+    width: 8rem;
+    height: auto;
+}
+.modal {
+    width: 100%;
+    height: 130vh;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.795);
+}
+.background {
+    background-image: url('./Imagens/247282ebee1908bbbeede4c72fb19bcf075433ebf0584ba82be94599da6c4d90.jpg');
+    background-position: center top;
+    background-size: cover;
+    background-attachment: fixed; /* Mantém a imagem fixa enquanto rola a página */
+    background-repeat: no-repeat;
+}
+
+/* Estilos para o main */
+main {
+    padding: 20px;
+    color: #f0f8ff;
+    font-family: 'Oswald', sans-serif;
+    background-color: #0000007e;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    align-items: center;
+}
+
+/* Estilos para a seção de contato */
+#contact-section {
+    margin-bottom: 40px;
+    text-align: center;
+    background-color: transparent;
+    z-index: 1;
+}
+
+#contact-section h1 {
+    font-size: 36px;
+    color: #d21617;
+    margin-bottom: 20px;
+    background-color: transparent;
+}
+
+#contact-section p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    background-color: transparent;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: transparent;
+}
+
+.contact-info img {
+    width: 150px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.contact-info div {
+    max-width: 500px;
+    background-color: transparent;
+}
+
+.contact-info h2 {
+    font-size: 24px;
+    color: #d21617;
+    margin-bottom: 10px;
+    background-color: transparent;
+}
+
+.contact-info p {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+/* Estilos para a seção de ingressos */
+#ticket-section {
+    margin-bottom: 40px;
+    text-align: center;
+    z-index: 1;
+    background-color: transparent;
+}
+
+#ticket-section h2 {
+    font-size: 30px;
+    color: #d21617;
+    margin-bottom: 20px;
+    background-color: transparent;
+}
+
+#ticket-section p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    background-color: transparent;
+}
+
+.ticket-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: transparent;
+}
+
+.ticket-info img {
+    width: 150px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.ticket-info div {
+    max-width: 500px;
+    background-color: transparent;
+}
+
+.ticket-info h3 {
+    font-size: 24px;
+    color: #d21617;
+    margin-bottom: 10px;
+    background-color: transparent;
+}
+
+.ticket-info p {
+    font-size: 18px;
+    margin: 5px 0;
+  
+}
+
+.button {
+    width: 13rem;
+    height: 4rem;
+    background-color: #d21617;
+    color: #ffffff; /* Aplica a cor ao texto */
+    padding: 8px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.8s;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    margin-top: 25px;
+    position: relative; /* Necessário para posicionamento do box-shadow */
+}
+
+.button:hover {
+    background-color: #ffffff;
+    color: #000000;
+    box-shadow: 0 0 10px 5px rgba(210, 22, 23, 0.7); /* Box-shadow com desfoque */
+}
+
+/* Estilos para o rodapé */
+footer {
+    height: 300px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+span {
+    color: #ffffff;
+    font-family: "Oswald", sans-serif;
+    margin: -45px;
+}
+
+.footer-navigation {
+    text-align: center; /* Centraliza o conteúdo do nav */
+    display: none;
+}
+
+.footer-list {
+    list-style-type: none; /* Remove os marcadores da lista */
+    padding: 0; /* Remove o padding da lista */
+    margin: 0; /* Remove a margem da lista */
+    display: flex; /* Define a lista como flexível */
+    justify-content: center; /* Centraliza os itens da lista */
+}
+
+.footer-list li {
+    margin: 0 10px; /* Define uma margem horizontal entre os itens */
+}
+
+.logo2 {
+    width: 10rem;
+    height: auto;
+    margin-bottom: 10px;
+    
+}
+
+.assinatura {
+    margin-bottom: 2px;
+}
+
+@media (max-width: 768px) { /* PARA DISPOSITIVOS MOBILE */
+    .footer-navigation {
+        display: block;
+    }
+
+    .trailer {
+        margin-top: 300px;
+        margin-left: 20px;
+    }
+
+    .button {
+        width: 100%;
+        margin-bottom: 90px;
+    }
+
+    .banner-1 {
+        margin-top: 45px;
+    }
+
+    .logo2 {
+        width: 150px;
+        height: auto;
+        margin-bottom: 80px;
+    }
+
+    .copyright {
+        margin-bottom: -40px;
+    }
+
+    .assinatura {
+        margin-bottom: 10px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .footer-list {
+        margin-bottom: 10px;
+    }
+
+    #Banner {
+        background-position: 40%;
+    }
+
+    #trailer-container {
+        width: 100%;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .trailer {
+        width: 100%;
+    }
+
+    #sinopse {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .description {
+        width: 100%;
+    }
+
+    .cards-contents {
+        grid-template-columns: 1fr;
+        margin-top: 150px;
+    }
+}

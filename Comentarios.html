@@ -3,10 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Comentários - The Batman Part II</title>
+    <meta name="description" content="Veja os comentários sobre The Batman Part II e deixe a sua opinião.">
+    <link rel="stylesheet" href="comentarios.css">
+    <link rel="shortcut icon" href="./FAVICON/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    Comentários
-    <h1>EM DESENVOLVIMENTO</h1>
+    <header class="modal2">
+        <a href="./index.html">
+            <img id="logo" src="./Imagens/OIP.jpg" alt="Logo do batman">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="./Index.html">Home</a></li>
+                <li><a href="./Contatos.html">Contatos</a></li>
+                <li><a href="./Fotos.html">Fotos</a></li>
+                <li><a href="./Comentarios.html">Comentários</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="modal"></div>
+        <section id="comments-section">
+            <h1>Comentários</h1>
+            <div class="comments-container">
+                <div class="comment">
+                    <h2>John Doe</h2>
+                    <p>Amei o filme! Mal posso esperar para assistir novamente.</p>
+                </div>
+                <div class="comment">
+                    <h2>Jane Smith</h2>
+                    <p>Ótima atuação de Robert Pattinson. O filme superou minhas expectativas!</p>
+                </div>
+                
+            </div>
+
+            <form id="comment-form">
+                <h2>Deixe seu comentário</h2>
+                <input type="text" id="name" placeholder="Seu nome" required>
+                <textarea id="comment" placeholder="Seu comentário" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <nav class="footer-navigation">
+            <ul class="footer-list">
+                <li><a href="./Index.html">Home</a></li>
+                <li><a href="./Contatos.html">Contatos</a></li>
+                <li><a href="./Fotos.html">Fotos</a></li>
+                <li><a href="./Comentarios.html">Comentários</a></li>
+            </ul>
+        </nav>
+        
+        <img class="logo2" style="object-fit: contain;" src="./Imagens/OIP.jpg" alt="Logo do batman">
+        <span class="copyright">Todos os direitos reservados ©</span>
+        <span class="assinatura">Desenvolvido por Jeferson Reis</span>
+    </footer>
 </body>
 </html>

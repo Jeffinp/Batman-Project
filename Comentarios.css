@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Eczar:wght@400..800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+/* Estilos para a página de comentários */
+body {
+    background-image: url('https://static0.gamerantimages.com/wordpress/wp-content/uploads/2022/03/The-Batman-Box-Office-500M-75148-PM.jpg');
+    background-position: center;
+    background-color: #00000054;
+    background-size: cover;
+    background-attachment: fixed; /* Mantém a imagem fixa enquanto rola a página */
+    background-repeat: no-repeat;
+    color: white; /* Cor do texto sobre o fundo */
+    font-family: 'Oswald', sans-serif; /* Fonte do texto */
+}
+
+header {
+    height: 90px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    position: relative;
+    z-index: 2; 
+}
+
+nav {
+    width: 60%;
+}
+
+ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+li {
+    color: #f0f8ff;
+    cursor: pointer;
+    font-size: 21px;
+    transition: 0.5s;
+    font-family: "Oswald", sans-serif;
+}
+
+/* para remover o azul do link após ser clicado */
+li a:link {
+    color: inherit;
+    text-decoration: none;
+}
+
+li a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+li:hover {
+    color: #d21617;
+}
+
+#logo {
+    width: 8rem;
+    height: auto;
+}
+
+.modal {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1; 
+}
+
+#comments-section {
+    text-align: center;
+    margin: 40px auto;
+    position: relative;
+    z-index: 3; 
+}
+
+#comments-section h1 {
+    font-size: 36px;
+    color: #d21617;
+    margin-bottom: 20px;
+}
+
+.comments-container {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    position: relative; /* usar a posição relativa para manter o objeto na frente */
+    z-index: 3; /* para o obj ficar na frente, quanto maior o valor, mais para a frente o objeto vai, funciona como camadas */
+}
+
+.comment {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.comment h2 {
+    font-size: 24px;
+    color: #d21617;
+    margin-bottom: 10px;
+}
+
+.comment p {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+#comment-form {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#comment-form h2 {
+    font-size: 24px;
+    color: #d21617;
+    margin-bottom: 20px;
+}
+
+#comment-form input, #comment-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #d21617;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    font-size: 16px;
+}
+
+#comment-form button {
+    background-color: #d21617;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+}
+
+#comment-form button:hover {
+    background-color: #a30d10;
+}
+
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(0, 0, 0); /* Fundo escuro */
+    position: relative;
+    z-index: 2; /* Mantém o footer na frente do fundo escuro */
+}
+
+.footer-navigation {
+    margin-bottom: 20px;
+}
+
+.footer-list {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-list li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer-list a {
+    color: #d21617;
+    text-decoration: none;
+}
+
+.footer-list a:hover {
+    text-decoration: underline;
+}
+
+.footer-navigation {
+    text-align: center; /* Centraliza o conteúdo do nav */
+    display: none;
+}
+
+.footer-list {
+    list-style-type: none; /* Remove os marcadores da lista */
+    padding: 0; /* Remove o padding da lista */
+    margin: 0; /* Remove a margem da lista */
+    display: flex; /* Define a lista como flexível */
+    justify-content: center; /* Centraliza os itens da lista */
+}
+
+.footer-list li {
+    margin: 0 10px; /* Define uma margem horizontal entre os itens */
+}
+
+
+.logo2 {
+    width: 10rem;
+    height: auto;
+    margin-bottom: 10px;
+    display: block;
+    margin: 20px auto;
+}
+
+.assinatura {
+    margin-bottom: 2px;
+    display: block;
+}
+
+@media (max-width: 768px) { /* PARA DISPOSITIVOS MOBILE */
+    .footer-navigation {
+        display: block;
+    }
+
+    .trailer {
+        margin-top: 300px;
+        margin-left: 20px;
+    }
+
+    .button {
+        width: 100%;
+        margin-bottom: 90px;
+    }
+
+    .banner-1 {
+        margin-top: 45px;
+    }
+
+    .logo2 {
+        width: 150px;
+        height: auto;
+        margin-bottom: 80px;
+    }
+
+    .copyright {
+        margin-bottom: -40px;
+    }
+
+    .assinatura {
+        margin-bottom: 10px;
+    }
+}
