@@ -262,8 +262,5 @@ footer p {
     .cards-contents { grid-template-columns: 1fr; margin-top: 150px; }
     /* Melhor acessibilidade */
     a:focus,
-    button:focus {
-        outline: 2px solid var(--accent-color);
-        outline-offset: 2px;
-    }
+    button:focus { outline: 2px solid var(--accent-color); outline-offset: 2px; }
 }
