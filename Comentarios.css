@@ -244,7 +244,7 @@ footer p {
         background-color: transparent;
     }
 
-    /* Melhorando a acessibilidade */
+    /* melhor acessibilidade */
     a:focus,
     button:focus {
         outline: 2px solid var(--accent-color);
