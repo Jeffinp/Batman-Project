@@ -1,3 +1,4 @@
+
 /* Importação de fontes */
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Eczar:wght@400..800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
@@ -14,14 +15,14 @@
 * {
     margin: 0;
     padding: 0;
+    background-color: var(--background-color);
     list-style: none;
     text-decoration: none;
     box-sizing: border-box;
 }
 
+/* Evita scroll horizontal */
 html, body {
-    background-color: var(--background-color);
-    color: var(--text-color);
     overflow-x: hidden;
 }
 
@@ -35,38 +36,40 @@ header {
 
 nav {
     width: 60%;
-    display: flex;
 }
 
-nav ul {
+ul {
     display: flex;
     width: 100%;
     justify-content: space-between;
 }
 
-nav li {
+li {
+    color: #f0f8ff;
     cursor: pointer;
     font-size: 21px;
-    transition: color 0.5s;
+    transition: 0.5s;
     font-family: var(--font-primary);
 }
 
-nav li a {
+li a {
     color: inherit;
+    text-decoration: none;
 }
 
-nav li:hover {
+li:hover {
     color: var(--primary-color);
 }
 
 #logo {
     width: 8rem;
+    height: auto;
 }
 
 /* Estilo do banner */
 #Banner {
     background-image: url('https://t.ctcdn.com.br/BztkvPe1BQe3e-hdycrPDUKa5L4=/1024x576/smart/i586811.png');
-    background-position: center;
+    background-position: 50% 50%;
     background-size: cover;
     width: 100%;
     height: 600px;
@@ -93,9 +96,9 @@ nav li:hover {
 /* Estilo do container do trailer */
 #trailer-container {
     width: 100%;
+    height: 400px;
     display: flex;
     justify-content: center;
-    padding: 20px 0;
 }
 
 .content {
@@ -118,6 +121,7 @@ nav li:hover {
 }
 
 .description {
+    color: var(--text-color);
     font-size: 20px;
     font-family: var(--font-primary);
     width: 90%;
@@ -133,7 +137,7 @@ nav li:hover {
     padding: 8px 10px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.8s, color 0.8s, box-shadow 0.8s;
+    transition: 0.8s;
     font-size: 18px;
     display: flex;
     justify-content: center;
@@ -142,6 +146,7 @@ nav li:hover {
     border: none;
     outline: none;
     margin-top: 25px;
+    position: relative;
 }
 
 .button:hover {
@@ -169,7 +174,7 @@ nav li:hover {
     width: 100%;
     height: 40rem;
     background-size: cover;
-    background-position: center;
+    background-position: 50% 50%;
     border-radius: 5px;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -177,6 +182,7 @@ nav li:hover {
     flex-direction: column;
     justify-content: flex-end;
     padding: 0 0 20px 10px;
+    color: var(--text-color);
     font-size: 19px;
     font-style: italic;
     font-family: var(--font-primary);
@@ -189,6 +195,7 @@ nav li:hover {
     box-shadow: 0 0 20px rgba(78, 78, 78, 0.5);
 }
 
+/* Imagens de fundo para os cards */
 .banner-1 { background-image: url("./Imagens/batman-robert-pattinson-foto-divulgacao-warner-bros_fixed_large.webp"); }
 .banner-2 { background-image: url("https://criticalhits.com.br/wp-content/uploads/2022/03/zoe-kravitz-mulher-gato.jpg"); }
 .banner-3 { background-image: url("https://ovicio.com.br/wp-content/uploads/2020/12/20201218-jeffrey_wright_gotham_the_batman_hbo_max_commissioner_gordon.png"); }
@@ -205,7 +212,9 @@ footer {
 }
 
 footer p {
+    color: var(--text-color);
     font-family: var(--font-primary);
+    margin: -45px;
 }
 
 .footer-navigation {
@@ -220,13 +229,15 @@ footer p {
 
 .logo2 {
     width: 10rem;
-    border-radius: 50%;
-    transition: transform 0.5s;
+    height: auto;
+    border-radius: 500px;
+    transition: 0.5s;
 }
 
 .logo2:hover {
     transform: scale(1.008);
 }
+
 
 /* Media Queries */
 @media (max-width: 1024px) {
@@ -238,13 +249,18 @@ footer p {
 @media (max-width: 768px) {
     .footer-navigation { display: block; }
     .trailer { margin-top: 300px; margin-left: 20px; margin-right: 20px; }
-    .button { width: 90%; margin-bottom: 90px; }
+    .button { width: 90%; margin-bottom: 90px;}
     .banner-1 { margin-top: 45px; }
     .logo2 { width: 150px; margin-bottom: 80px; }
+    .copyright { margin-bottom:  2.3rem; }
+    .assinatura { margin-bottom: 0.625rem; background-color: transparent;}
+    nav { display: none; }
     .footer-list { margin-bottom: 10px; column-gap: 12px; }
     #Banner { background-position: 40%; }
     #trailer-container, .content { width: 100%; flex-direction: column; }
     .trailer, #sinopse, .description { width: 92%; text-align: justify; }
     .cards-contents { grid-template-columns: 1fr; margin-top: 150px; }
-    a:focus, button:focus { outline: 2px solid var(--accent-color); outline-offset: 2px; }
+    /* Melhor acessibilidade */
+    a:focus,
+    button:focus { outline: 2px solid var(--accent-color); outline-offset: 2px; }
 }
