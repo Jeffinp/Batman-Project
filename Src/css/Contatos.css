@@ -67,7 +67,7 @@ nav li:hover {
 }
 
 .background {
-    background-image: url('./Imagens/247282ebee1908bbbeede4c72fb19bcf075433ebf0584ba82be94599da6c4d90.jpg');
+    background-image: url('../Imagens/247282ebee1908bbbeede4c72fb19bcf075433ebf0584ba82be94599da6c4d90.jpg');
     background-position: center top;
     background-size: cover;
     background-attachment: fixed;

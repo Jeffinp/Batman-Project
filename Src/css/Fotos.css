@@ -19,7 +19,7 @@ body {
     color: var(--secondary-color);
     font-family: var(--main-font);
     overflow-x: hidden;
-    background-image: url('./Imagens/the-batman-2021-movie-batman-minimal-art-wallpaper-2560x1080_14.jpg');
+    background-image: url('../Imagens/the-batman-2021-movie-batman-minimal-art-wallpaper-2560x1080_14.jpg');
     background-position: center top;
     background-size: cover;
     background-attachment: fixed;
